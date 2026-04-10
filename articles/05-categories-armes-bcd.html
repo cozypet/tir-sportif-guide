@@ -4,10 +4,10 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f2f1ed; --card: #faf9f5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
-    --accent: #c4553a; --accent-light: #f0ddd6; --accent-dark: #8b3a28;
-    --blue: #3a6b8c; --blue-light: #d4e1eb; --green: #4a7c59; --green-light: #d4e8da;
-    --gold: #b8860b; --gold-light: #f5ecd4; --border: #d5d3ce; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --bg: #f2f1ed; --card: #faf9f5; --text: #141413; --text-secondary: #555; --text-muted: #888;
+    --accent: #d97757; --accent-light: #faf0eb; --accent-dark: #b05a3a;
+    --blue: #6a9bcc; --blue-light: #eef4f9; --green: #788c5d; --green-light: #f0f3ec;
+    --gold: #b8923e; --gold-light: #f9f3e6; --border: #e0ded6; --shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'IBM Plex Serif',Georgia,serif; background:var(--bg); color:var(--text); line-height:1.78; font-size:18px; -webkit-font-smoothing:antialiased; }
@@ -52,7 +52,7 @@
   tr:hover td { background:var(--accent-light); }
   .info-box { background:var(--blue-light); border:1.5px solid var(--blue); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .info-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
-  .warn-box { background:#fce4e4; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .warn-box { background:#faf0eb; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .warn-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
   @media (max-width:640px) { h1{font-size:28px;} .subtitle{font-size:17px;} .article{padding:28px 16px 64px;} .rule{flex-direction:column;gap:10px;} .rule-num{font-size:32px;} .diagram{padding:20px 12px 14px;} }
 </style></head><body>
@@ -77,46 +77,46 @@
 
 <div class="diagram">
 <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-<defs><linearGradient id="dg2" x1="0" x2="1"><stop offset="0%" stop-color="#4a7c59"/><stop offset="100%" stop-color="#c4553a"/></linearGradient></defs>
+<defs><linearGradient id="dg2" x1="0" x2="1"><stop offset="0%" stop-color="#788c5d"/><stop offset="100%" stop-color="#d97757"/></linearGradient></defs>
 <rect x="14" y="250" width="672" height="5" rx="2.5" fill="url(#dg2)" opacity="0.5"/>
-<text x="14" y="275" font-size="11" fill="#4a7c59" font-weight="600">← LIBRE</text>
-<text x="620" y="275" font-size="11" fill="#c4553a" font-weight="600">INTERDIT →</text>
+<text x="14" y="275" font-size="18" fill="#788c5d" font-weight="600">← LIBRE</text>
+<text x="620" y="275" font-size="18" fill="#d97757" font-weight="600">INTERDIT →</text>
 
-<rect x="14" y="20" width="160" height="210" rx="14" fill="#d4e8da" stroke="#4a7c59" stroke-width="2"/>
-<text x="94" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#3a5a3f">CAT. D</text>
-<text x="94" y="70" text-anchor="middle" font-size="12" font-weight="600" fill="#4a7c59">LIBRE</text>
-<text x="94" y="96" text-anchor="middle" font-size="11" fill="#555">Air comprimé ≤ 20 J</text>
-<text x="94" y="114" text-anchor="middle" font-size="11" fill="#555">Armes blanches</text>
-<text x="94" y="132" text-anchor="middle" font-size="11" fill="#555">Bombes lacrymo</text>
-<text x="94" y="160" text-anchor="middle" font-size="10" fill="#888">Condition : 18 ans +</text>
-<text x="94" y="178" text-anchor="middle" font-size="10" fill="#888">pièce d'identité</text>
+<rect x="14" y="20" width="160" height="210" rx="14" fill="#f0f3ec" stroke="#788c5d" stroke-width="2"/>
+<text x="94" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">CAT. D</text>
+<text x="94" y="70" text-anchor="middle" font-size="18" font-weight="600" fill="#788c5d">LIBRE</text>
+<text x="94" y="96" text-anchor="middle" font-size="18" fill="#555">Air comprimé ≤ 20 J</text>
+<text x="94" y="114" text-anchor="middle" font-size="18" fill="#555">Armes blanches</text>
+<text x="94" y="132" text-anchor="middle" font-size="18" fill="#555">Bombes lacrymo</text>
+<text x="94" y="160" text-anchor="middle" font-size="18" fill="#888">Condition : 18 ans +</text>
+<text x="94" y="178" text-anchor="middle" font-size="18" fill="#888">pièce d'identité</text>
 
-<rect x="190" y="20" width="170" height="210" rx="14" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="2"/>
-<text x="275" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#2a4f6b">CAT. C</text>
-<text x="275" y="70" text-anchor="middle" font-size="12" font-weight="600" fill="#3a6b8c">DÉCLARATION</text>
-<text x="275" y="96" text-anchor="middle" font-size="11" fill="#555">Carabines .22 LR</text>
-<text x="275" y="114" text-anchor="middle" font-size="11" fill="#555">Fusils de chasse</text>
-<text x="275" y="132" text-anchor="middle" font-size="11" fill="#555">Air comprimé > 20 J</text>
-<text x="275" y="160" text-anchor="middle" font-size="10" fill="#888">Licence FFTir ou</text>
-<text x="275" y="178" text-anchor="middle" font-size="10" fill="#888">permis de chasse</text>
+<rect x="190" y="20" width="170" height="210" rx="14" fill="#eef4f9" stroke="#6a9bcc" stroke-width="2"/>
+<text x="275" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#4a7ba8">CAT. C</text>
+<text x="275" y="70" text-anchor="middle" font-size="18" font-weight="600" fill="#6a9bcc">DÉCLARATION</text>
+<text x="275" y="96" text-anchor="middle" font-size="18" fill="#555">Carabines .22 LR</text>
+<text x="275" y="114" text-anchor="middle" font-size="18" fill="#555">Fusils de chasse</text>
+<text x="275" y="132" text-anchor="middle" font-size="18" fill="#555">Air comprimé > 20 J</text>
+<text x="275" y="160" text-anchor="middle" font-size="18" fill="#888">Licence FFTir ou</text>
+<text x="275" y="178" text-anchor="middle" font-size="18" fill="#888">permis de chasse</text>
 
-<rect x="376" y="20" width="170" height="210" rx="14" fill="#f5ecd4" stroke="#b8860b" stroke-width="2"/>
-<text x="461" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#8b6508">CAT. B</text>
-<text x="461" y="70" text-anchor="middle" font-size="12" font-weight="600" fill="#b8860b">AUTORISATION</text>
-<text x="461" y="96" text-anchor="middle" font-size="11" fill="#555">Armes de poing</text>
-<text x="461" y="114" text-anchor="middle" font-size="11" fill="#555">Semi-auto gros cal.</text>
-<text x="461" y="132" text-anchor="middle" font-size="11" fill="#555">Max 15 armes</text>
-<text x="461" y="160" text-anchor="middle" font-size="10" fill="#888">6 mois licence min.</text>
-<text x="461" y="178" text-anchor="middle" font-size="10" fill="#888">+ autorisation préfet</text>
+<rect x="376" y="20" width="170" height="210" rx="14" fill="#f9f3e6" stroke="#b8923e" stroke-width="2"/>
+<text x="461" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">CAT. B</text>
+<text x="461" y="70" text-anchor="middle" font-size="18" font-weight="600" fill="#b8923e">AUTORISATION</text>
+<text x="461" y="96" text-anchor="middle" font-size="18" fill="#555">Armes de poing</text>
+<text x="461" y="114" text-anchor="middle" font-size="18" fill="#555">Semi-auto gros cal.</text>
+<text x="461" y="132" text-anchor="middle" font-size="18" fill="#555">Max 15 armes</text>
+<text x="461" y="160" text-anchor="middle" font-size="18" fill="#888">6 mois licence min.</text>
+<text x="461" y="178" text-anchor="middle" font-size="18" fill="#888">+ autorisation préfet</text>
 
-<rect x="562" y="20" width="124" height="210" rx="14" fill="#fce4e4" stroke="#c4553a" stroke-width="2"/>
-<text x="624" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#c4553a">CAT. A</text>
-<text x="624" y="70" text-anchor="middle" font-size="12" font-weight="600" fill="#c4553a">INTERDIT</text>
-<text x="624" y="96" text-anchor="middle" font-size="11" fill="#555">Armes de guerre</text>
-<text x="624" y="114" text-anchor="middle" font-size="11" fill="#555">Automatiques</text>
-<text x="624" y="132" text-anchor="middle" font-size="11" fill="#555">Matériel militaire</text>
-<text x="624" y="160" text-anchor="middle" font-size="10" fill="#888">Réservé forces</text>
-<text x="624" y="178" text-anchor="middle" font-size="10" fill="#888">de l'ordre</text>
+<rect x="562" y="20" width="124" height="210" rx="14" fill="#faf0eb" stroke="#d97757" stroke-width="2"/>
+<text x="624" y="48" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">CAT. A</text>
+<text x="624" y="70" text-anchor="middle" font-size="18" font-weight="600" fill="#d97757">INTERDIT</text>
+<text x="624" y="96" text-anchor="middle" font-size="18" fill="#555">Armes de guerre</text>
+<text x="624" y="114" text-anchor="middle" font-size="18" fill="#555">Automatiques</text>
+<text x="624" y="132" text-anchor="middle" font-size="18" fill="#555">Matériel militaire</text>
+<text x="624" y="160" text-anchor="middle" font-size="18" fill="#888">Réservé forces</text>
+<text x="624" y="178" text-anchor="middle" font-size="18" fill="#888">de l'ordre</text>
 </svg>
 <div class="diagram-cap">Diagramme 1 : Les 4 catégories d'armes en droit français. Le tireur sportif évolue principalement dans les catégories D, C et B. Sources : Service-public.fr, Légifrance Art. R311-2.</div>
 </div>
@@ -127,22 +127,22 @@
 <div class="diagram">
 <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
 <defs><marker id="c1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#777"/></marker></defs>
-<rect x="200" y="8" width="300" height="40" rx="20" fill="#3a6b8c"/><text x="350" y="33" text-anchor="middle" font-size="13" font-weight="600" fill="white">Licence FFTir active (6 mois min.)</text>
+<rect x="200" y="8" width="300" height="40" rx="20" fill="#6a9bcc"/><text x="350" y="33" text-anchor="middle" font-size="18" font-weight="600" fill="#faf9f5">Licence FFTir active (6 mois min.)</text>
 <line x1="350" y1="48" x2="350" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#c1)"/>
-<rect x="180" y="68" width="340" height="36" rx="8" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="91" text-anchor="middle" font-size="12" fill="#8b6508">3 tirs contrôlés (espacés de 2 mois min.)</text>
+<rect x="180" y="68" width="340" height="36" rx="8" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="91" text-anchor="middle" font-size="18" fill="#937430">3 tirs contrôlés (espacés de 2 mois min.)</text>
 <line x1="350" y1="104" x2="350" y2="122" stroke="#777" stroke-width="1.5" marker-end="url(#c1)"/>
-<rect x="180" y="124" width="340" height="36" rx="8" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="147" text-anchor="middle" font-size="12" fill="#8b6508">Réussite QCM FFTir (12/15 sécurité min.)</text>
+<rect x="180" y="124" width="340" height="36" rx="8" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="147" text-anchor="middle" font-size="18" fill="#937430">Réussite QCM FFTir (12/15 sécurité min.)</text>
 <line x1="350" y1="160" x2="350" y2="178" stroke="#777" stroke-width="1.5" marker-end="url(#c1)"/>
-<rect x="180" y="180" width="340" height="36" rx="8" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="203" text-anchor="middle" font-size="12" fill="#8b6508">Avis favorable du président de club</text>
+<rect x="180" y="180" width="340" height="36" rx="8" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="203" text-anchor="middle" font-size="18" fill="#937430">Avis favorable du président de club</text>
 <line x1="350" y1="216" x2="350" y2="234" stroke="#777" stroke-width="1.5" marker-end="url(#c1)"/>
-<rect x="180" y="236" width="340" height="36" rx="8" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="259" text-anchor="middle" font-size="12" fill="#8b6508">Demande via SIA + certificat médical</text>
+<rect x="180" y="236" width="340" height="36" rx="8" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="259" text-anchor="middle" font-size="18" fill="#937430">Demande via SIA + certificat médical</text>
 <line x1="350" y1="272" x2="350" y2="290" stroke="#777" stroke-width="1.5" marker-end="url(#c1)"/>
-<rect x="200" y="292" width="300" height="40" rx="20" fill="#4a7c59"/><text x="350" y="317" text-anchor="middle" font-size="13" font-weight="600" fill="white">Autorisation préfectorale (5 ans)</text>
+<rect x="200" y="292" width="300" height="40" rx="20" fill="#788c5d"/><text x="350" y="317" text-anchor="middle" font-size="18" font-weight="600" fill="#faf9f5">Autorisation préfectorale (5 ans)</text>
 </svg>
 <div class="diagram-cap">Diagramme 2 : Le parcours d'acquisition catégorie B. Comptez 8 a 12 mois au total. Sources : préfectures, Code de la sécurité intérieure.</div>
 </div>
 
-<div class="warn-box"><p>⚠ <strong>Quota catégorie B :</strong> un tireur sportif peut détenir au maximum 15 armes de catégorie B + 10 armes de poing à percussion annulaire à un coup. L'autorisation est valable 5 ans et renouvelable.</p></div>
+<div class="warn-box"><p> <strong>Quota catégorie B :</strong> un tireur sportif peut détenir au maximum 15 armes de catégorie B + 10 armes de poing à percussion annulaire à un coup. L'autorisation est valable 5 ans et renouvelable.</p></div>
 
 <blockquote>La réglementation française est stricte mais logique : elle garantit que chaque détenteur d'arme à feu est formé, suivi et responsable.</blockquote>
 

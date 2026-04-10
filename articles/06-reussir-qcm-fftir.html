@@ -4,10 +4,10 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f2f1ed; --card: #faf9f5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
-    --accent: #c4553a; --accent-light: #f0ddd6; --accent-dark: #8b3a28;
-    --blue: #3a6b8c; --blue-light: #d4e1eb; --green: #4a7c59; --green-light: #d4e8da;
-    --gold: #b8860b; --gold-light: #f5ecd4; --border: #d5d3ce; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --bg: #f2f1ed; --card: #faf9f5; --text: #141413; --text-secondary: #555; --text-muted: #888;
+    --accent: #d97757; --accent-light: #faf0eb; --accent-dark: #b05a3a;
+    --blue: #6a9bcc; --blue-light: #eef4f9; --green: #788c5d; --green-light: #f0f3ec;
+    --gold: #b8923e; --gold-light: #f9f3e6; --border: #e0ded6; --shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'IBM Plex Serif',Georgia,serif; background:var(--bg); color:var(--text); line-height:1.78; font-size:18px; -webkit-font-smoothing:antialiased; }
@@ -52,7 +52,7 @@
   tr:hover td { background:var(--accent-light); }
   .info-box { background:var(--blue-light); border:1.5px solid var(--blue); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .info-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
-  .warn-box { background:#fce4e4; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .warn-box { background:#faf0eb; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .warn-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
   @media (max-width:640px) { h1{font-size:28px;} .subtitle{font-size:17px;} .article{padding:28px 16px 64px;} .rule{flex-direction:column;gap:10px;} .rule-num{font-size:32px;} .diagram{padding:20px 12px 14px;} }
 </style></head><body>
@@ -76,17 +76,17 @@
 <h2>Structure du QCM</h2>
 <div class="diagram">
 <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-<rect x="20" y="20" width="420" height="120" rx="14" fill="#fce4e4" stroke="#c4553a" stroke-width="2"/>
-<text x="230" y="50" text-anchor="middle" font-size="16" font-weight="700" fill="#c4553a">15 questions de SÉCURITÉ</text>
-<text x="230" y="74" text-anchor="middle" font-size="13" fill="#555">Seuil : 12 bonnes réponses minimum</text>
-<text x="230" y="96" text-anchor="middle" font-size="12" fill="#888">8 questions éliminatoires (Q1,2,3,7,8,9,11,14)</text>
-<text x="230" y="116" text-anchor="middle" font-size="12" font-weight="600" fill="#c4553a">→ Toutes les réponses dans le Manuel FFTir</text>
+<rect x="20" y="20" width="420" height="120" rx="14" fill="#faf0eb" stroke="#d97757" stroke-width="2"/>
+<text x="230" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">15 questions de SÉCURITÉ</text>
+<text x="230" y="74" text-anchor="middle" font-size="18" fill="#555">Seuil : 12 bonnes réponses minimum</text>
+<text x="230" y="96" text-anchor="middle" font-size="18" fill="#888">8 questions éliminatoires (Q1,2,3,7,8,9,11,14)</text>
+<text x="230" y="116" text-anchor="middle" font-size="18" font-weight="600" fill="#d97757">→ Toutes les réponses dans le Manuel FFTir</text>
 
-<rect x="460" y="20" width="220" height="120" rx="14" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.5"/>
-<text x="570" y="50" text-anchor="middle" font-size="16" font-weight="700" fill="#2a4f6b">Questions TECHNIQUES</text>
-<text x="570" y="74" text-anchor="middle" font-size="13" fill="#555">Non éliminatoires</text>
-<text x="570" y="96" text-anchor="middle" font-size="12" fill="#888">Hausse, réglages, éthique</text>
-<text x="570" y="116" text-anchor="middle" font-size="12" fill="#3a6b8c">→ Pas de seuil minimum</text>
+<rect x="460" y="20" width="220" height="120" rx="14" fill="#eef4f9" stroke="#6a9bcc" stroke-width="1.5"/>
+<text x="570" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#4a7ba8">Questions TECHNIQUES</text>
+<text x="570" y="74" text-anchor="middle" font-size="18" fill="#555">Non éliminatoires</text>
+<text x="570" y="96" text-anchor="middle" font-size="18" fill="#888">Hausse, réglages, éthique</text>
+<text x="570" y="116" text-anchor="middle" font-size="18" fill="#6a9bcc">→ Pas de seuil minimum</text>
 </svg>
 <div class="diagram-cap">Diagramme 1 : Structure du QCM FFTir. Concentrez 100% de votre préparation sur les questions de sécurité. Source : FFTir.</div>
 </div>
@@ -94,16 +94,16 @@
 <h2>Les 5 thèmes à maîtriser</h2>
 <div class="diagram">
 <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-<rect x="14" y="20" width="125" height="140" rx="10" fill="#faf9f5" stroke="#c4553a" stroke-width="1.5"/>
-<text x="76" y="48" text-anchor="middle" font-size="22">🔒</text><text x="76" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#c4553a">États de</text><text x="76" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#c4553a">l'arme</text><text x="76" y="108" text-anchor="middle" font-size="10" fill="#888">Assurée, chargée</text><text x="76" y="122" text-anchor="middle" font-size="10" fill="#888">prête à tirer...</text>
-<rect x="153" y="20" width="125" height="140" rx="10" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/>
-<text x="215" y="48" text-anchor="middle" font-size="22">🚗</text><text x="215" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#b8860b">Transport</text><text x="215" y="108" text-anchor="middle" font-size="10" fill="#888">Mallette, verrou</text><text x="215" y="122" text-anchor="middle" font-size="10" fill="#888">munitions à part</text>
-<rect x="292" y="20" width="125" height="140" rx="10" fill="#faf9f5" stroke="#4a7c59" stroke-width="1.5"/>
-<text x="354" y="48" text-anchor="middle" font-size="22">🏠</text><text x="354" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#4a7c59">Stockage</text><text x="354" y="108" text-anchor="middle" font-size="10" fill="#888">Coffre fort, armoire</text><text x="354" y="122" text-anchor="middle" font-size="10" fill="#888">forte obligatoire</text>
-<rect x="431" y="20" width="125" height="140" rx="10" fill="#faf9f5" stroke="#3a6b8c" stroke-width="1.5"/>
-<text x="493" y="48" text-anchor="middle" font-size="22">🎯</text><text x="493" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#3a6b8c">Comportement</text><text x="493" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#3a6b8c">au stand</text><text x="493" y="108" text-anchor="middle" font-size="10" fill="#888">Chaud/froid, canon</text><text x="493" y="122" text-anchor="middle" font-size="10" fill="#888">direction cibles</text>
-<rect x="570" y="20" width="116" height="140" rx="10" fill="#faf9f5" stroke="#c4553a" stroke-width="1.5"/>
-<text x="628" y="48" text-anchor="middle" font-size="22">⚠</text><text x="628" y="72" text-anchor="middle" font-size="11" font-weight="600" fill="#c4553a">Incidents</text><text x="628" y="108" text-anchor="middle" font-size="10" fill="#888">Raté, long feu</text><text x="628" y="122" text-anchor="middle" font-size="10" fill="#888">appel directeur</text>
+<rect x="14" y="20" width="125" height="140" rx="10" fill="#faf9f5" stroke="#d97757" stroke-width="1.5"/>
+<text x="76" y="48" text-anchor="middle" font-size="22"></text><text x="76" y="72" text-anchor="middle" font-size="18" font-weight="600" fill="#d97757">États de</text><text x="76" y="86" text-anchor="middle" font-size="18" font-weight="600" fill="#d97757">l'arme</text><text x="76" y="108" text-anchor="middle" font-size="18" fill="#888">Assurée, chargée</text><text x="76" y="122" text-anchor="middle" font-size="18" fill="#888">prête à tirer...</text>
+<rect x="153" y="20" width="125" height="140" rx="10" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/>
+<text x="215" y="48" text-anchor="middle" font-size="22"></text><text x="215" y="72" text-anchor="middle" font-size="18" font-weight="600" fill="#b8923e">Transport</text><text x="215" y="108" text-anchor="middle" font-size="18" fill="#888">Mallette, verrou</text><text x="215" y="122" text-anchor="middle" font-size="18" fill="#888">munitions à part</text>
+<rect x="292" y="20" width="125" height="140" rx="10" fill="#faf9f5" stroke="#788c5d" stroke-width="1.5"/>
+<text x="354" y="48" text-anchor="middle" font-size="22"></text><text x="354" y="72" text-anchor="middle" font-size="18" font-weight="600" fill="#788c5d">Stockage</text><text x="354" y="108" text-anchor="middle" font-size="18" fill="#888">Coffre fort, armoire</text><text x="354" y="122" text-anchor="middle" font-size="18" fill="#888">forte obligatoire</text>
+<rect x="431" y="20" width="125" height="140" rx="10" fill="#faf9f5" stroke="#6a9bcc" stroke-width="1.5"/>
+<text x="493" y="48" text-anchor="middle" font-size="22"></text><text x="493" y="72" text-anchor="middle" font-size="18" font-weight="600" fill="#6a9bcc">Comportement</text><text x="493" y="86" text-anchor="middle" font-size="18" font-weight="600" fill="#6a9bcc">au stand</text><text x="493" y="108" text-anchor="middle" font-size="18" fill="#888">Chaud/froid, canon</text><text x="493" y="122" text-anchor="middle" font-size="18" fill="#888">direction cibles</text>
+<rect x="570" y="20" width="116" height="140" rx="10" fill="#faf9f5" stroke="#d97757" stroke-width="1.5"/>
+<text x="628" y="48" text-anchor="middle" font-size="22"></text><text x="628" y="72" text-anchor="middle" font-size="18" font-weight="600" fill="#d97757">Incidents</text><text x="628" y="108" text-anchor="middle" font-size="18" fill="#888">Raté, long feu</text><text x="628" y="122" text-anchor="middle" font-size="18" fill="#888">appel directeur</text>
 </svg>
 <div class="diagram-cap">Diagramme 2 : Les 5 piliers du QCM. Maîtrisez ces thèmes et le 12/15 est acquis. Source : Manuel de découverte du Tireur Sportif.</div>
 </div>

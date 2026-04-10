@@ -4,10 +4,10 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f2f1ed; --card: #faf9f5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
-    --accent: #c4553a; --accent-light: #f0ddd6; --accent-dark: #8b3a28;
-    --blue: #3a6b8c; --blue-light: #d4e1eb; --green: #4a7c59; --green-light: #d4e8da;
-    --gold: #b8860b; --gold-light: #f5ecd4; --border: #d5d3ce; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --bg: #f2f1ed; --card: #faf9f5; --text: #141413; --text-secondary: #555; --text-muted: #888;
+    --accent: #d97757; --accent-light: #faf0eb; --accent-dark: #b05a3a;
+    --blue: #6a9bcc; --blue-light: #eef4f9; --green: #788c5d; --green-light: #f0f3ec;
+    --gold: #b8923e; --gold-light: #f9f3e6; --border: #e0ded6; --shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'IBM Plex Serif',Georgia,serif; background:var(--bg); color:var(--text); line-height:1.78; font-size:18px; -webkit-font-smoothing:antialiased; }
@@ -52,7 +52,7 @@
   tr:hover td { background:var(--accent-light); }
   .info-box { background:var(--blue-light); border:1.5px solid var(--blue); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .info-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
-  .warn-box { background:#fce4e4; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .warn-box { background:#faf0eb; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .warn-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
   @media (max-width:640px) { h1{font-size:28px;} .subtitle{font-size:17px;} .article{padding:28px 16px 64px;} .rule{flex-direction:column;gap:10px;} .rule-num{font-size:32px;} .diagram{padding:20px 12px 14px;} }
 </style></head><body>
@@ -77,29 +77,29 @@
 <div class="diagram">
 <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
 <!-- Cible -->
-<circle cx="350" cy="180" r="140" fill="#faf9f5" stroke="#d5d3ce" stroke-width="1"/>
-<circle cx="350" cy="180" r="110" fill="#faf9f5" stroke="#d5d3ce" stroke-width="1"/>
-<circle cx="350" cy="180" r="80" fill="#faf9f5" stroke="#d5d3ce" stroke-width="1"/>
-<circle cx="350" cy="180" r="50" fill="#faf9f5" stroke="#d5d3ce" stroke-width="1"/>
-<circle cx="350" cy="180" r="20" fill="#1a1a1a"/>
-<circle cx="350" cy="180" r="8" fill="#c4553a"/>
+<circle cx="350" cy="180" r="140" fill="#faf9f5" stroke="#e0ded6" stroke-width="1"/>
+<circle cx="350" cy="180" r="110" fill="#faf9f5" stroke="#e0ded6" stroke-width="1"/>
+<circle cx="350" cy="180" r="80" fill="#faf9f5" stroke="#e0ded6" stroke-width="1"/>
+<circle cx="350" cy="180" r="50" fill="#faf9f5" stroke="#e0ded6" stroke-width="1"/>
+<circle cx="350" cy="180" r="20" fill="#141413"/>
+<circle cx="350" cy="180" r="8" fill="#d97757"/>
 
 <!-- Annotations -->
-<circle cx="310" cy="250" r="8" fill="#c4553a" opacity="0.6"/><circle cx="320" cy="240" r="8" fill="#c4553a" opacity="0.6"/><circle cx="300" cy="260" r="8" fill="#c4553a" opacity="0.6"/>
-<line x1="280" y1="270" x2="200" y2="310" stroke="#c4553a" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="80" y="310" font-size="12" font-weight="600" fill="#c4553a">Bas-gauche (droitier)</text>
-<text x="80" y="326" font-size="11" fill="#555">= Anticipation du recul</text>
-<text x="80" y="342" font-size="11" fill="#555">ou lâcher brusque</text>
+<circle cx="310" cy="250" r="8" fill="#d97757" opacity="0.6"/><circle cx="320" cy="240" r="8" fill="#d97757" opacity="0.6"/><circle cx="300" cy="260" r="8" fill="#d97757" opacity="0.6"/>
+<line x1="280" y1="270" x2="200" y2="310" stroke="#d97757" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="80" y="310" font-size="18" font-weight="600" fill="#d97757">Bas-gauche (droitier)</text>
+<text x="80" y="326" font-size="18" fill="#555">= Anticipation du recul</text>
+<text x="80" y="342" font-size="18" fill="#555">ou lâcher brusque</text>
 
-<circle cx="350" cy="100" r="8" fill="#3a6b8c" opacity="0.6"/><circle cx="340" cy="110" r="8" fill="#3a6b8c" opacity="0.6"/><circle cx="360" cy="90" r="8" fill="#3a6b8c" opacity="0.6"/>
-<line x1="370" y1="85" x2="520" y2="50" stroke="#3a6b8c" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="525" y="48" font-size="12" font-weight="600" fill="#3a6b8c">Haut (groupé)</text>
-<text x="525" y="64" font-size="11" fill="#555">= Respiration mal calée</text>
+<circle cx="350" cy="100" r="8" fill="#6a9bcc" opacity="0.6"/><circle cx="340" cy="110" r="8" fill="#6a9bcc" opacity="0.6"/><circle cx="360" cy="90" r="8" fill="#6a9bcc" opacity="0.6"/>
+<line x1="370" y1="85" x2="520" y2="50" stroke="#6a9bcc" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="525" y="48" font-size="18" font-weight="600" fill="#6a9bcc">Haut (groupé)</text>
+<text x="525" y="64" font-size="18" fill="#555">= Respiration mal calée</text>
 
-<circle cx="270" cy="150" r="8" fill="#4a7c59" opacity="0.6"/><circle cx="430" cy="210" r="8" fill="#4a7c59" opacity="0.6"/><circle cx="310" cy="120" r="8" fill="#4a7c59" opacity="0.6"/><circle cx="400" cy="260" r="8" fill="#4a7c59" opacity="0.6"/>
-<line x1="440" y1="215" x2="540" y2="230" stroke="#4a7c59" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="545" y="228" font-size="12" font-weight="600" fill="#4a7c59">Dispersé partout</text>
-<text x="545" y="244" font-size="11" fill="#555">= Problème de grip</text>
+<circle cx="270" cy="150" r="8" fill="#788c5d" opacity="0.6"/><circle cx="430" cy="210" r="8" fill="#788c5d" opacity="0.6"/><circle cx="310" cy="120" r="8" fill="#788c5d" opacity="0.6"/><circle cx="400" cy="260" r="8" fill="#788c5d" opacity="0.6"/>
+<line x1="440" y1="215" x2="540" y2="230" stroke="#788c5d" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="545" y="228" font-size="18" font-weight="600" fill="#788c5d">Dispersé partout</text>
+<text x="545" y="244" font-size="18" fill="#555">= Problème de grip</text>
 </svg>
 <div class="diagram-cap">Diagramme 1 : Carte de diagnostic pour un tireur droitier. Le pattern des impacts révèle l'erreur technique. Sources : instructeurs FFTir, forums spécialisés.</div>
 </div>

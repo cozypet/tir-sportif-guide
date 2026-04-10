@@ -9,19 +9,19 @@
   :root {
     --bg: #f2f1ed;
     --card: #faf9f5;
-    --text: #1a1a1a;
+    --text: #141413;
     --text-secondary: #555;
     --text-muted: #888;
-    --accent: #c4553a;
-    --accent-light: #f0ddd6;
-    --accent-dark: #8b3a28;
-    --blue: #3a6b8c;
-    --blue-light: #d4e1eb;
-    --green: #4a7c59;
-    --green-light: #d4e8da;
-    --gold: #b8860b;
-    --gold-light: #f5ecd4;
-    --border: #d5d3ce;
+    --accent: #d97757;
+    --accent-light: #faf0eb;
+    --accent-dark: #b05a3a;
+    --blue: #6a9bcc;
+    --blue-light: #eef4f9;
+    --green: #788c5d;
+    --green-light: #f0f3ec;
+    --gold: #b8923e;
+    --gold-light: #f9f3e6;
+    --border: #e0ded6;
     --shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
 
@@ -349,37 +349,37 @@
 <div class="diagram">
   <svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
     <!-- Couche 1 -->
-    <rect x="20" y="16" width="640" height="365" rx="24" fill="none" stroke="#c4553a" stroke-width="2.5" stroke-dasharray="0"/>
-    <rect x="20" y="16" width="640" height="365" rx="24" fill="#c4553a" opacity="0.06"/>
-    <text x="52" y="50" font-size="13.5" font-weight="600" fill="#8b3a28">COUCHE 1 · Toujours considérer l'arme comme chargée</text>
+    <rect x="20" y="16" width="640" height="365" rx="24" fill="none" stroke="#d97757" stroke-width="2.5" stroke-dasharray="0"/>
+    <rect x="20" y="16" width="640" height="365" rx="24" fill="#d97757" opacity="0.06"/>
+    <text x="52" y="50" font-size="18" font-weight="600" fill="#b05a3a">COUCHE 1 · Toujours considérer l'arme comme chargée</text>
 
     <!-- Couche 2 -->
-    <rect x="54" y="66" width="572" height="295" rx="20" fill="none" stroke="#4a7c59" stroke-width="2" stroke-dasharray="0"/>
-    <rect x="54" y="66" width="572" height="295" rx="20" fill="#4a7c59" opacity="0.06"/>
-    <text x="82" y="96" font-size="13" font-weight="600" fill="#3a5a3f">COUCHE 2 · Ne jamais pointer vers ce qu'on ne veut pas détruire</text>
+    <rect x="54" y="66" width="572" height="295" rx="20" fill="none" stroke="#788c5d" stroke-width="2" stroke-dasharray="0"/>
+    <rect x="54" y="66" width="572" height="295" rx="20" fill="#788c5d" opacity="0.06"/>
+    <text x="82" y="96" font-size="18" font-weight="600" fill="#5a6e48">COUCHE 2 · Ne jamais pointer vers ce qu'on ne veut pas détruire</text>
 
     <!-- Couche 3 -->
-    <rect x="88" y="112" width="504" height="229" rx="16" fill="none" stroke="#3a6b8c" stroke-width="2"/>
-    <rect x="88" y="112" width="504" height="229" rx="16" fill="#3a6b8c" opacity="0.06"/>
-    <text x="112" y="140" font-size="13" font-weight="600" fill="#2a4f6b">COUCHE 3 · Index hors de la détente tant qu'on ne vise pas</text>
+    <rect x="88" y="112" width="504" height="229" rx="16" fill="none" stroke="#6a9bcc" stroke-width="2"/>
+    <rect x="88" y="112" width="504" height="229" rx="16" fill="#6a9bcc" opacity="0.06"/>
+    <text x="112" y="140" font-size="18" font-weight="600" fill="#4a7ba8">COUCHE 3 · Index hors de la détente tant qu'on ne vise pas</text>
 
     <!-- Couche 4 -->
-    <rect x="122" y="158" width="436" height="163" rx="12" fill="var(--card)" stroke="#b8860b" stroke-width="2"/>
-    <text x="146" y="186" font-size="13" font-weight="600" fill="#8b6508">COUCHE 4 · Identifier sa cible ET ce qu'il y a derrière</text>
+    <rect x="122" y="158" width="436" height="163" rx="12" fill="var(--card)" stroke="#b8923e" stroke-width="2"/>
+    <text x="146" y="186" font-size="18" font-weight="600" fill="#937430">COUCHE 4 · Identifier sa cible ET ce qu'il y a derrière</text>
 
     <!-- Icône centrale -->
-    <circle cx="340" cy="256" r="38" fill="#c4553a" opacity="0.10"/>
-    <text x="340" y="252" text-anchor="middle" font-size="32">🎯</text>
-    <text x="340" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#c4553a">TIR SÛR</text>
+    <circle cx="340" cy="256" r="38" fill="#d97757" opacity="0.10"/>
+    <text x="340" y="252" text-anchor="middle" font-size="32"></text>
+    <text x="340" y="284" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">TIR SÛR</text>
 
     <!-- Annotation flèche -->
     <defs>
       <marker id="ar" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-        <polygon points="0 0, 8 3, 0 6" fill="#c4553a"/>
+        <polygon points="0 0, 8 3, 0 6" fill="#d97757"/>
       </marker>
     </defs>
-    <line x1="620" y1="370" x2="620" y2="32" stroke="#c4553a" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#ar)"/>
-    <text x="640" y="210" font-size="11" fill="#8b3a28" font-weight="500" transform="rotate(-90,640,210)">Profondeur de redondance</text>
+    <line x1="620" y1="370" x2="620" y2="32" stroke="#d97757" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+    <text x="640" y="210" font-size="18" fill="#b05a3a" font-weight="500" transform="rotate(-90,640,210)">Profondeur de redondance</text>
   </svg>
   <div class="diagram-cap">Diagramme 1 : Les 4 règles forment des couches de sécurité concentriques. Les 4 doivent être violées simultanément pour qu'une blessure survienne. Sources : NRA, Gunsite Academy, FFTir.</div>
 </div>
@@ -423,8 +423,8 @@
 <div class="diagram">
   <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
     <!-- ─── MAUVAIS ─── -->
-    <rect x="16" y="14" width="310" height="190" rx="14" fill="#fce4e4" stroke="#c4553a" stroke-width="1.5"/>
-    <text x="171" y="42" text-anchor="middle" font-size="15" font-weight="700" fill="#c4553a">✗ INCORRECT</text>
+    <rect x="16" y="14" width="310" height="190" rx="14" fill="#faf0eb" stroke="#d97757" stroke-width="1.5"/>
+    <text x="171" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">✗ INCORRECT</text>
 
     <!-- Arme simplifiée -->
     <rect x="50" y="80" width="220" height="34" rx="5" fill="#6b6b6b"/>
@@ -434,13 +434,13 @@
     <!-- Pontet -->
     <path d="M168,114 Q168,156 184,156 Q200,156 200,114" fill="none" stroke="#444" stroke-width="2.5"/>
     <!-- Doigt SUR la détente -->
-    <ellipse cx="184" cy="136" rx="16" ry="8" fill="#c4553a" opacity="0.8"/>
-    <text x="184" y="140" text-anchor="middle" font-size="10" fill="white" font-weight="600">index</text>
-    <text x="171" y="192" text-anchor="middle" font-size="12" fill="#8b3a28" font-weight="500">Index dans le pontet</text>
+    <ellipse cx="184" cy="136" rx="16" ry="8" fill="#d97757" opacity="0.8"/>
+    <text x="184" y="140" text-anchor="middle" font-size="18" fill="#faf9f5" font-weight="600">index</text>
+    <text x="171" y="192" text-anchor="middle" font-size="18" fill="#b05a3a" font-weight="500">Index dans le pontet</text>
 
     <!-- ─── BON ─── -->
-    <rect x="354" y="14" width="310" height="190" rx="14" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.5"/>
-    <text x="509" y="42" text-anchor="middle" font-size="15" font-weight="700" fill="#4a7c59">✓ CORRECT</text>
+    <rect x="354" y="14" width="310" height="190" rx="14" fill="#f0f3ec" stroke="#788c5d" stroke-width="1.5"/>
+    <text x="509" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#788c5d">✓ CORRECT</text>
 
     <!-- Arme simplifiée -->
     <rect x="388" y="80" width="220" height="34" rx="5" fill="#6b6b6b"/>
@@ -450,17 +450,17 @@
     <!-- Pontet -->
     <path d="M506,114 Q506,156 522,156 Q538,156 538,114" fill="none" stroke="#444" stroke-width="2.5"/>
     <!-- Doigt le long de la carcasse -->
-    <ellipse cx="510" cy="92" rx="16" ry="7" fill="#4a7c59" opacity="0.8"/>
-    <text x="510" y="96" text-anchor="middle" font-size="10" fill="white" font-weight="600">index</text>
+    <ellipse cx="510" cy="92" rx="16" ry="7" fill="#788c5d" opacity="0.8"/>
+    <text x="510" y="96" text-anchor="middle" font-size="18" fill="#faf9f5" font-weight="600">index</text>
     <!-- Flèche indicatrice -->
-    <path d="M540,92 L558,92" stroke="#4a7c59" stroke-width="1.5" marker-end="url(#ag)"/>
-    <text x="564" y="96" font-size="9" fill="#3a5a3f" font-weight="500">le long</text>
-    <text x="564" y="107" font-size="9" fill="#3a5a3f" font-weight="500">du cadre</text>
-    <text x="509" y="192" text-anchor="middle" font-size="12" fill="#3a5a3f" font-weight="500">Index le long de la carcasse</text>
+    <path d="M540,92 L558,92" stroke="#788c5d" stroke-width="1.5" marker-end="url(#ag)"/>
+    <text x="564" y="96" font-size="18" fill="#5a6e48" font-weight="500">le long</text>
+    <text x="564" y="107" font-size="18" fill="#5a6e48" font-weight="500">du cadre</text>
+    <text x="509" y="192" text-anchor="middle" font-size="18" fill="#5a6e48" font-weight="500">Index le long de la carcasse</text>
 
     <defs>
       <marker id="ag" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
-        <polygon points="0 0, 7 2.5, 0 5" fill="#4a7c59"/>
+        <polygon points="0 0, 7 2.5, 0 5" fill="#788c5d"/>
       </marker>
     </defs>
   </svg>
@@ -480,55 +480,55 @@
         <polygon points="0 0, 8 3, 0 6" fill="#777"/>
       </marker>
       <linearGradient id="dg" x1="0" x2="1">
-        <stop offset="0%" stop-color="#4a7c59"/>
-        <stop offset="100%" stop-color="#c4553a"/>
+        <stop offset="0%" stop-color="#788c5d"/>
+        <stop offset="100%" stop-color="#d97757"/>
       </linearGradient>
     </defs>
 
     <!-- Barre de gradient -->
     <rect x="14" y="128" width="672" height="5" rx="2.5" fill="url(#dg)" opacity="0.5"/>
-    <text x="14" y="152" font-size="11" fill="#4a7c59" font-weight="600">← SÛR</text>
-    <text x="642" y="152" font-size="11" fill="#c4553a" font-weight="600">LÉTAL →</text>
+    <text x="14" y="152" font-size="18" fill="#788c5d" font-weight="600">← SÛR</text>
+    <text x="642" y="152" font-size="18" fill="#d97757" font-weight="600">LÉTAL →</text>
 
     <!-- État 1 -->
-    <rect x="14" y="26" width="118" height="80" rx="10" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.8"/>
-    <text x="73" y="56" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3a5a3f">Assurée</text>
-    <text x="73" y="74" text-anchor="middle" font-size="10" fill="#555">Culasse ouverte</text>
-    <text x="73" y="88" text-anchor="middle" font-size="10" fill="#555">Contrôlée vide</text>
+    <rect x="14" y="26" width="118" height="80" rx="10" fill="#f0f3ec" stroke="#788c5d" stroke-width="1.8"/>
+    <text x="73" y="56" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">Assurée</text>
+    <text x="73" y="74" text-anchor="middle" font-size="18" fill="#555">Culasse ouverte</text>
+    <text x="73" y="88" text-anchor="middle" font-size="18" fill="#555">Contrôlée vide</text>
 
     <line x1="132" y1="66" x2="154" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#aw)"/>
 
     <!-- État 2 -->
-    <rect x="156" y="26" width="118" height="80" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.8"/>
-    <text x="215" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">Désappro-</text>
-    <text x="215" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">visionnée</text>
-    <text x="215" y="88" text-anchor="middle" font-size="10" fill="#555">Plus de munitions</text>
+    <rect x="156" y="26" width="118" height="80" rx="10" fill="#eef4f9" stroke="#6a9bcc" stroke-width="1.8"/>
+    <text x="215" y="52" text-anchor="middle" font-size="18" font-weight="700" fill="#4a7ba8">Désappro-</text>
+    <text x="215" y="68" text-anchor="middle" font-size="18" font-weight="700" fill="#4a7ba8">visionnée</text>
+    <text x="215" y="88" text-anchor="middle" font-size="18" fill="#555">Plus de munitions</text>
 
     <line x1="274" y1="66" x2="296" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#aw)"/>
 
     <!-- État 3 -->
-    <rect x="298" y="26" width="118" height="80" rx="10" fill="#f5ecd4" stroke="#b8860b" stroke-width="1.8"/>
-    <text x="357" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#8b6508">Appro-</text>
-    <text x="357" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#8b6508">visionnée</text>
-    <text x="357" y="88" text-anchor="middle" font-size="10" fill="#555">Munitions, pas en</text>
-    <text x="357" y="101" text-anchor="middle" font-size="10" fill="#555">chambre</text>
+    <rect x="298" y="26" width="118" height="80" rx="10" fill="#f9f3e6" stroke="#b8923e" stroke-width="1.8"/>
+    <text x="357" y="52" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">Appro-</text>
+    <text x="357" y="68" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">visionnée</text>
+    <text x="357" y="88" text-anchor="middle" font-size="18" fill="#555">Munitions, pas en</text>
+    <text x="357" y="101" text-anchor="middle" font-size="18" fill="#555">chambre</text>
 
     <line x1="416" y1="66" x2="438" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#aw)"/>
 
     <!-- État 4 -->
-    <rect x="440" y="26" width="108" height="80" rx="10" fill="#fce4e4" stroke="#c4553a" stroke-width="1.8"/>
-    <text x="494" y="56" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c4553a">Chargée</text>
-    <text x="494" y="74" text-anchor="middle" font-size="10" fill="#555">Munition en</text>
-    <text x="494" y="88" text-anchor="middle" font-size="10" fill="#555">chambre</text>
+    <rect x="440" y="26" width="108" height="80" rx="10" fill="#faf0eb" stroke="#d97757" stroke-width="1.8"/>
+    <text x="494" y="56" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">Chargée</text>
+    <text x="494" y="74" text-anchor="middle" font-size="18" fill="#555">Munition en</text>
+    <text x="494" y="88" text-anchor="middle" font-size="18" fill="#555">chambre</text>
 
     <line x1="548" y1="66" x2="570" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#aw)"/>
 
     <!-- État 5 -->
-    <rect x="572" y="26" width="114" height="80" rx="10" fill="#c4553a" stroke="#8b3a28" stroke-width="1.8"/>
-    <text x="629" y="56" text-anchor="middle" font-size="12.5" font-weight="700" fill="white">Prête à</text>
-    <text x="629" y="74" text-anchor="middle" font-size="12.5" font-weight="700" fill="white">tirer</text>
-    <text x="629" y="92" text-anchor="middle" font-size="10" fill="#fdd">Action sur détente</text>
-    <text x="629" y="105" text-anchor="middle" font-size="10" fill="#fdd">= départ du coup</text>
+    <rect x="572" y="26" width="114" height="80" rx="10" fill="#d97757" stroke="#b05a3a" stroke-width="1.8"/>
+    <text x="629" y="56" text-anchor="middle" font-size="18" font-weight="700" fill="#faf9f5">Prête à</text>
+    <text x="629" y="74" text-anchor="middle" font-size="18" font-weight="700" fill="#faf9f5">tirer</text>
+    <text x="629" y="92" text-anchor="middle" font-size="18" fill="#fdd">Action sur détente</text>
+    <text x="629" y="105" text-anchor="middle" font-size="18" fill="#fdd">= départ du coup</text>
   </svg>
   <div class="diagram-cap">Diagramme 3 : Les 5 états d'une arme selon la FFTir. Chaque étape augmente le risque et exige une action explicite et délibérée. Source : Manuel de découverte du Tireur Sportif, FFTir.</div>
 </div>
@@ -541,66 +541,66 @@
 <div class="diagram">
   <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
     <!-- Zone sécurisée -->
-    <rect x="16" y="16" width="130" height="224" rx="12" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.5"/>
-    <text x="81" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#3a5a3f">ZONE</text>
-    <text x="81" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#3a5a3f">SÉCURISÉE</text>
-    <text x="81" y="82" text-anchor="middle" font-size="10" fill="#555">Armes en mallette</text>
-    <text x="81" y="98" text-anchor="middle" font-size="10" fill="#555">Cordon de sécurité</text>
-    <text x="81" y="114" text-anchor="middle" font-size="10" fill="#555">visible dans le canon</text>
-    <text x="81" y="140" text-anchor="middle" font-size="20">🧳</text>
+    <rect x="16" y="16" width="130" height="224" rx="12" fill="#f0f3ec" stroke="#788c5d" stroke-width="1.5"/>
+    <text x="81" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">ZONE</text>
+    <text x="81" y="58" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">SÉCURISÉE</text>
+    <text x="81" y="82" text-anchor="middle" font-size="18" fill="#555">Armes en mallette</text>
+    <text x="81" y="98" text-anchor="middle" font-size="18" fill="#555">Cordon de sécurité</text>
+    <text x="81" y="114" text-anchor="middle" font-size="18" fill="#555">visible dans le canon</text>
+    <text x="81" y="140" text-anchor="middle" font-size="20"></text>
 
     <!-- Pas de tir -->
-    <rect x="162" y="16" width="150" height="224" rx="12" fill="#f5ecd4" stroke="#b8860b" stroke-width="1.5"/>
-    <text x="237" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#8b6508">PAS DE TIR</text>
-    <text x="237" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#8b6508">(Ligne de feu)</text>
-    <text x="237" y="82" text-anchor="middle" font-size="10" fill="#555">Arme sortie, manipulée</text>
-    <text x="237" y="98" text-anchor="middle" font-size="10" fill="#555">Canon → cibles</text>
-    <text x="237" y="114" text-anchor="middle" font-size="10" fill="#555">uniquement</text>
+    <rect x="162" y="16" width="150" height="224" rx="12" fill="#f9f3e6" stroke="#b8923e" stroke-width="1.5"/>
+    <text x="237" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">PAS DE TIR</text>
+    <text x="237" y="58" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">(Ligne de feu)</text>
+    <text x="237" y="82" text-anchor="middle" font-size="18" fill="#555">Arme sortie, manipulée</text>
+    <text x="237" y="98" text-anchor="middle" font-size="18" fill="#555">Canon → cibles</text>
+    <text x="237" y="114" text-anchor="middle" font-size="18" fill="#555">uniquement</text>
     <!-- Tireurs -->
-    <text x="200" y="168" font-size="28">🧍</text>
-    <text x="240" y="168" font-size="28">🧍</text>
+    <text x="200" y="168" font-size="28"></text>
+    <text x="240" y="168" font-size="28"></text>
 
     <!-- Zone de tir -->
-    <rect x="328" y="16" width="238" height="224" rx="12" fill="#fce4e4" stroke="#c4553a" stroke-width="1.5"/>
-    <text x="447" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#c4553a">ZONE DE TIR</text>
-    <text x="447" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#c4553a">(Downrange)</text>
-    <text x="447" y="82" text-anchor="middle" font-size="10" fill="#555">Accès UNIQUEMENT</text>
-    <text x="447" y="98" text-anchor="middle" font-size="10" fill="#555">lorsque le tir est « froid »</text>
+    <rect x="328" y="16" width="238" height="224" rx="12" fill="#faf0eb" stroke="#d97757" stroke-width="1.5"/>
+    <text x="447" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">ZONE DE TIR</text>
+    <text x="447" y="58" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">(Downrange)</text>
+    <text x="447" y="82" text-anchor="middle" font-size="18" fill="#555">Accès UNIQUEMENT</text>
+    <text x="447" y="98" text-anchor="middle" font-size="18" fill="#555">lorsque le tir est « froid »</text>
     <!-- Cibles -->
-    <circle cx="380" cy="160" r="22" fill="none" stroke="#c4553a" stroke-width="2"/>
-    <circle cx="380" cy="160" r="10" fill="#c4553a" opacity="0.25"/>
-    <circle cx="380" cy="160" r="3" fill="#c4553a"/>
-    <circle cx="447" cy="170" r="22" fill="none" stroke="#c4553a" stroke-width="2"/>
-    <circle cx="447" cy="170" r="10" fill="#c4553a" opacity="0.25"/>
-    <circle cx="447" cy="170" r="3" fill="#c4553a"/>
-    <circle cx="514" cy="155" r="22" fill="none" stroke="#c4553a" stroke-width="2"/>
-    <circle cx="514" cy="155" r="10" fill="#c4553a" opacity="0.25"/>
-    <circle cx="514" cy="155" r="3" fill="#c4553a"/>
+    <circle cx="380" cy="160" r="22" fill="none" stroke="#d97757" stroke-width="2"/>
+    <circle cx="380" cy="160" r="10" fill="#d97757" opacity="0.25"/>
+    <circle cx="380" cy="160" r="3" fill="#d97757"/>
+    <circle cx="447" cy="170" r="22" fill="none" stroke="#d97757" stroke-width="2"/>
+    <circle cx="447" cy="170" r="10" fill="#d97757" opacity="0.25"/>
+    <circle cx="447" cy="170" r="3" fill="#d97757"/>
+    <circle cx="514" cy="155" r="22" fill="none" stroke="#d97757" stroke-width="2"/>
+    <circle cx="514" cy="155" r="10" fill="#d97757" opacity="0.25"/>
+    <circle cx="514" cy="155" r="3" fill="#d97757"/>
 
     <!-- Butte -->
-    <rect x="582" y="16" width="102" height="224" rx="12" fill="#d5d3ce" stroke="#999" stroke-width="1.5"/>
-    <text x="633" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#555">BUTTE</text>
-    <text x="633" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#555">DE TIR</text>
-    <text x="633" y="82" text-anchor="middle" font-size="10" fill="#777">Pare-balles</text>
-    <text x="633" y="130" text-anchor="middle" font-size="32">🧱</text>
+    <rect x="582" y="16" width="102" height="224" rx="12" fill="#e0ded6" stroke="#999" stroke-width="1.5"/>
+    <text x="633" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#555">BUTTE</text>
+    <text x="633" y="58" text-anchor="middle" font-size="18" font-weight="700" fill="#555">DE TIR</text>
+    <text x="633" y="82" text-anchor="middle" font-size="18" fill="#777">Pare-balles</text>
+    <text x="633" y="130" text-anchor="middle" font-size="32"></text>
 
     <!-- Flèche direction de tir -->
     <defs>
       <marker id="af" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-        <polygon points="0 0, 10 3.5, 0 7" fill="#c4553a"/>
+        <polygon points="0 0, 10 3.5, 0 7" fill="#d97757"/>
       </marker>
     </defs>
-    <line x1="275" y1="210" x2="350" y2="210" stroke="#c4553a" stroke-width="2.5" marker-end="url(#af)"/>
-    <text x="313" y="230" text-anchor="middle" font-size="11" fill="#c4553a" font-weight="600">Direction de tir</text>
+    <line x1="275" y1="210" x2="350" y2="210" stroke="#d97757" stroke-width="2.5" marker-end="url(#af)"/>
+    <text x="313" y="230" text-anchor="middle" font-size="18" fill="#d97757" font-weight="600">Direction de tir</text>
 
     <!-- Indicateurs chaud / froid -->
-    <rect x="162" y="260" width="90" height="28" rx="14" fill="#c4553a"/>
-    <text x="207" y="279" text-anchor="middle" font-size="12" fill="white" font-weight="600">🔴 CHAUD</text>
-    <text x="266" y="279" font-size="11" fill="#555">= Tir autorisé</text>
+    <rect x="162" y="260" width="90" height="28" rx="14" fill="#d97757"/>
+    <text x="207" y="279" text-anchor="middle" font-size="18" fill="#faf9f5" font-weight="600"> CHAUD</text>
+    <text x="266" y="279" font-size="18" fill="#555">= Tir autorisé</text>
 
-    <rect x="420" y="260" width="86" height="28" rx="14" fill="#3a6b8c"/>
-    <text x="463" y="279" text-anchor="middle" font-size="12" fill="white" font-weight="600">🔵 FROID</text>
-    <text x="520" y="279" font-size="11" fill="#555">= Armes posées, accès cibles</text>
+    <rect x="420" y="260" width="86" height="28" rx="14" fill="#6a9bcc"/>
+    <text x="463" y="279" text-anchor="middle" font-size="18" fill="#faf9f5" font-weight="600"> FROID</text>
+    <text x="520" y="279" font-size="18" fill="#555">= Armes posées, accès cibles</text>
   </svg>
   <div class="diagram-cap">Diagramme 4 : Anatomie d'un stand de tir. Les armes ne sont manipulées qu'au pas de tir pendant la phase « chaude ». Sources : FFTir, directives de sécurité NSSF.</div>
 </div>
@@ -619,54 +619,54 @@
     </defs>
 
     <!-- Départ -->
-    <rect x="195" y="8" width="270" height="46" rx="23" fill="#c4553a"/>
-    <text x="330" y="36" text-anchor="middle" font-size="14" font-weight="600" fill="white">🏠 DOMICILE : Arme dans le coffre</text>
+    <rect x="195" y="8" width="270" height="46" rx="23" fill="#d97757"/>
+    <text x="330" y="36" text-anchor="middle" font-size="18" font-weight="600" fill="#faf9f5"> DOMICILE : Arme dans le coffre</text>
 
     <line x1="330" y1="54" x2="330" y2="76" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
 
     <!-- Étape 1 -->
-    <rect x="155" y="78" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8860b" stroke-width="1.8"/>
-    <text x="178" y="105" font-size="13" fill="#8b6508" font-weight="600">1.</text>
-    <text x="198" y="105" font-size="13" fill="#8b6508">Désapprovisionner entièrement l'arme</text>
+    <rect x="155" y="78" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8923e" stroke-width="1.8"/>
+    <text x="178" y="105" font-size="18" fill="#937430" font-weight="600">1.</text>
+    <text x="198" y="105" font-size="18" fill="#937430">Désapprovisionner entièrement l'arme</text>
 
     <line x1="330" y1="122" x2="330" y2="140" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
 
     <!-- Étape 2 -->
-    <rect x="155" y="142" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8860b" stroke-width="1.8"/>
-    <text x="178" y="169" font-size="13" fill="#8b6508" font-weight="600">2.</text>
-    <text x="198" y="169" font-size="13" fill="#8b6508">Démonter ou poser un verrou de pontet</text>
+    <rect x="155" y="142" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8923e" stroke-width="1.8"/>
+    <text x="178" y="169" font-size="18" fill="#937430" font-weight="600">2.</text>
+    <text x="198" y="169" font-size="18" fill="#937430">Démonter ou poser un verrou de pontet</text>
 
     <line x1="330" y1="186" x2="330" y2="204" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
 
     <!-- Étape 3 -->
-    <rect x="155" y="206" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8860b" stroke-width="1.8"/>
-    <text x="178" y="233" font-size="13" fill="#8b6508" font-weight="600">3.</text>
-    <text x="198" y="233" font-size="13" fill="#8b6508">Placer dans une mallette ou housse fermée</text>
+    <rect x="155" y="206" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8923e" stroke-width="1.8"/>
+    <text x="178" y="233" font-size="18" fill="#937430" font-weight="600">3.</text>
+    <text x="198" y="233" font-size="18" fill="#937430">Placer dans une mallette ou housse fermée</text>
 
     <line x1="330" y1="250" x2="330" y2="268" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
 
     <!-- Étape 4 -->
-    <rect x="155" y="270" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8860b" stroke-width="1.8"/>
-    <text x="178" y="297" font-size="13" fill="#8b6508" font-weight="600">4.</text>
-    <text x="198" y="297" font-size="13" fill="#8b6508">Munitions transportées séparément</text>
+    <rect x="155" y="270" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8923e" stroke-width="1.8"/>
+    <text x="178" y="297" font-size="18" fill="#937430" font-weight="600">4.</text>
+    <text x="198" y="297" font-size="18" fill="#937430">Munitions transportées séparément</text>
 
     <!-- Encadré documents -->
-    <rect x="530" y="78" width="155" height="236" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.5"/>
-    <text x="607" y="102" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">Documents</text>
-    <text x="607" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">requis :</text>
-    <text x="542" y="142" font-size="11" fill="#333" font-weight="500">✓ Licence FFTir valide</text>
-    <text x="542" y="162" font-size="11" fill="#333" font-weight="500">✓ Carnet de tir (cat. B)</text>
-    <line x1="542" y1="176" x2="672" y2="176" stroke="#3a6b8c" stroke-width="0.5" opacity="0.4"/>
-    <text x="542" y="196" font-size="11" fill="#3a6b8c" font-style="italic">Conseillés :</text>
-    <text x="542" y="216" font-size="10.5" fill="#555">○ Autorisation de détention</text>
-    <text x="542" y="236" font-size="10.5" fill="#555">○ Facture de chaque arme</text>
-    <text x="542" y="256" font-size="10.5" fill="#555">○ Carte européenne</text>
-    <text x="548" y="272" font-size="10" fill="#888">(pour l'étranger)</text>
+    <rect x="530" y="78" width="155" height="236" rx="10" fill="#eef4f9" stroke="#6a9bcc" stroke-width="1.5"/>
+    <text x="607" y="102" text-anchor="middle" font-size="18" font-weight="700" fill="#4a7ba8">Documents</text>
+    <text x="607" y="118" text-anchor="middle" font-size="18" font-weight="700" fill="#4a7ba8">requis :</text>
+    <text x="542" y="142" font-size="18" fill="#333" font-weight="500">✓ Licence FFTir valide</text>
+    <text x="542" y="162" font-size="18" fill="#333" font-weight="500">✓ Carnet de tir (cat. B)</text>
+    <line x1="542" y1="176" x2="672" y2="176" stroke="#6a9bcc" stroke-width="0.5" opacity="0.4"/>
+    <text x="542" y="196" font-size="18" fill="#6a9bcc" font-style="italic">Conseillés :</text>
+    <text x="542" y="216" font-size="18" fill="#555">○ Autorisation de détention</text>
+    <text x="542" y="236" font-size="18" fill="#555">○ Facture de chaque arme</text>
+    <text x="542" y="256" font-size="18" fill="#555">○ Carte européenne</text>
+    <text x="548" y="272" font-size="18" fill="#888">(pour l'étranger)</text>
 
     <!-- Arrivée -->
     <line x1="330" y1="314" x2="330" y2="332" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
-    <rect x="195" y="334" width="270" height="46" rx="23" fill="#4a7c59"/>
-    <text x="330" y="362" text-anchor="middle" font-size="14" font-weight="600" fill="white">🎯 STAND : Ouverture au pas de tir</text>
+    <rect x="195" y="334" width="270" height="46" rx="23" fill="#788c5d"/>
+    <text x="330" y="362" text-anchor="middle" font-size="18" font-weight="600" fill="#faf9f5"> STAND : Ouverture au pas de tir</text>
   </svg>
   <div class="diagram-cap">Diagramme 5 : Protocole de transport français. L'arme doit être rendue immédiatement inutilisable pendant le trajet. Source : FFTir, Code pénal Art. R312.</div>
 </div>
@@ -685,43 +685,43 @@
     </defs>
 
     <!-- Étape 1 -->
-    <rect x="14" y="28" width="142" height="72" rx="10" fill="#fce4e4" stroke="#c4553a" stroke-width="1.8"/>
-    <text x="85" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#c4553a">CLIC, pas de</text>
-    <text x="85" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#c4553a">détonation</text>
-    <text x="85" y="90" text-anchor="middle" font-size="10" fill="#888">Raté détecté</text>
+    <rect x="14" y="28" width="142" height="72" rx="10" fill="#faf0eb" stroke="#d97757" stroke-width="1.8"/>
+    <text x="85" y="55" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">CLIC, pas de</text>
+    <text x="85" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">détonation</text>
+    <text x="85" y="90" text-anchor="middle" font-size="18" fill="#888">Raté détecté</text>
 
     <line x1="156" y1="64" x2="180" y2="64" stroke="#777" stroke-width="1.5" marker-end="url(#ax)"/>
 
     <!-- Étape 2 -->
-    <rect x="182" y="28" width="150" height="72" rx="10" fill="#f5ecd4" stroke="#b8860b" stroke-width="1.8"/>
-    <text x="257" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#8b6508">MAINTENIR</text>
-    <text x="257" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#8b6508">en direction cible</text>
-    <text x="257" y="88" text-anchor="middle" font-size="11" fill="#888">30 secondes min.</text>
-    <text x="257" y="100" text-anchor="middle" font-size="9.5" fill="#aaa">(risque de « long feu »)</text>
+    <rect x="182" y="28" width="150" height="72" rx="10" fill="#f9f3e6" stroke="#b8923e" stroke-width="1.8"/>
+    <text x="257" y="52" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">MAINTENIR</text>
+    <text x="257" y="68" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">en direction cible</text>
+    <text x="257" y="88" text-anchor="middle" font-size="18" fill="#888">30 secondes min.</text>
+    <text x="257" y="100" text-anchor="middle" font-size="18" fill="#aaa">(risque de « long feu »)</text>
 
     <line x1="332" y1="64" x2="356" y2="64" stroke="#777" stroke-width="1.5" marker-end="url(#ax)"/>
 
     <!-- Étape 3 -->
-    <rect x="358" y="28" width="150" height="72" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.8"/>
-    <text x="433" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">APPELER le</text>
-    <text x="433" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">directeur de tir</text>
-    <text x="433" y="88" text-anchor="middle" font-size="11" fill="#888">Ne PAS quitter</text>
-    <text x="433" y="100" text-anchor="middle" font-size="11" fill="#888">le poste</text>
+    <rect x="358" y="28" width="150" height="72" rx="10" fill="#eef4f9" stroke="#6a9bcc" stroke-width="1.8"/>
+    <text x="433" y="52" text-anchor="middle" font-size="18" font-weight="700" fill="#4a7ba8">APPELER le</text>
+    <text x="433" y="68" text-anchor="middle" font-size="18" font-weight="700" fill="#4a7ba8">directeur de tir</text>
+    <text x="433" y="88" text-anchor="middle" font-size="18" fill="#888">Ne PAS quitter</text>
+    <text x="433" y="100" text-anchor="middle" font-size="18" fill="#888">le poste</text>
 
     <line x1="508" y1="64" x2="532" y2="64" stroke="#777" stroke-width="1.5" marker-end="url(#ax)"/>
 
     <!-- Étape 4 -->
-    <rect x="534" y="28" width="150" height="72" rx="10" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.8"/>
-    <text x="609" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#3a5a3f">METTRE</text>
-    <text x="609" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#3a5a3f">l'arme en</text>
-    <text x="609" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#3a5a3f">sécurité</text>
+    <rect x="534" y="28" width="150" height="72" rx="10" fill="#f0f3ec" stroke="#788c5d" stroke-width="1.8"/>
+    <text x="609" y="56" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">METTRE</text>
+    <text x="609" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">l'arme en</text>
+    <text x="609" y="88" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">sécurité</text>
 
     <!-- Zone avertissement -->
-    <rect x="100" y="140" width="500" height="100" rx="12" fill="var(--card)" stroke="#c4553a" stroke-width="2" stroke-dasharray="7,4"/>
-    <text x="350" y="170" text-anchor="middle" font-size="16" font-weight="700" fill="#c4553a">⚠ JAMAIS</text>
-    <text x="350" y="194" text-anchor="middle" font-size="13" fill="#555">Regarder dans le canon · Quitter le poste avec une munition</text>
-    <text x="350" y="214" text-anchor="middle" font-size="13" fill="#555">en chambre · Tenter de réparer derrière la ligne de tir</text>
-    <text x="350" y="234" text-anchor="middle" font-size="13" fill="#555">avec une arme encore armée</text>
+    <rect x="100" y="140" width="500" height="100" rx="12" fill="var(--card)" stroke="#d97757" stroke-width="2" stroke-dasharray="7,4"/>
+    <text x="350" y="170" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757"> JAMAIS</text>
+    <text x="350" y="194" text-anchor="middle" font-size="18" fill="#555">Regarder dans le canon · Quitter le poste avec une munition</text>
+    <text x="350" y="214" text-anchor="middle" font-size="18" fill="#555">en chambre · Tenter de réparer derrière la ligne de tir</text>
+    <text x="350" y="234" text-anchor="middle" font-size="18" fill="#555">avec une arme encore armée</text>
   </svg>
   <div class="diagram-cap">Diagramme 6 : Protocole en cas de raté de percussion. Un « long feu » (départ retardé) peut se produire plusieurs secondes après l'action sur la détente. Sources : Circulaire de sécurité FFTir, procédures NRA.</div>
 </div>

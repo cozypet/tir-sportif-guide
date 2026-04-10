@@ -7,10 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f2f1ed; --card: #faf9f5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
-    --accent: #c4553a; --accent-light: #f0ddd6; --accent-dark: #8b3a28;
-    --blue: #3a6b8c; --blue-light: #d4e1eb; --green: #4a7c59; --green-light: #d4e8da;
-    --gold: #b8860b; --gold-light: #f5ecd4; --border: #d5d3ce; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --bg: #f2f1ed; --card: #faf9f5; --text: #141413; --text-secondary: #555; --text-muted: #888;
+    --accent: #d97757; --accent-light: #faf0eb; --accent-dark: #b05a3a;
+    --blue: #6a9bcc; --blue-light: #eef4f9; --green: #788c5d; --green-light: #f0f3ec;
+    --gold: #b8923e; --gold-light: #f9f3e6; --border: #e0ded6; --shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'IBM Plex Serif',Georgia,serif; background:var(--bg); color:var(--text); line-height:1.78; font-size:18px; -webkit-font-smoothing:antialiased; }
@@ -55,7 +55,7 @@
   tr:hover td { background:var(--accent-light); }
   .info-box { background:var(--blue-light); border:1.5px solid var(--blue); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .info-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
-  .warn-box { background:#fce4e4; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .warn-box { background:#faf0eb; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .warn-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
   @media (max-width:640px) { h1{font-size:28px;} .subtitle{font-size:17px;} .article{padding:28px 16px 64px;} .rule{flex-direction:column;gap:10px;} .rule-num{font-size:32px;} .diagram{padding:20px 12px 14px;} }
 </style>
@@ -87,19 +87,19 @@
 <div class="diagram">
 <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
 <defs><marker id="a1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#777"/></marker></defs>
-<rect x="220" y="8" width="260" height="44" rx="22" fill="#3a6b8c"/><text x="350" y="35" text-anchor="middle" font-size="14" font-weight="600" fill="white">1. Trouver un club (fftir.org)</text>
+<rect x="220" y="8" width="260" height="44" rx="22" fill="#6a9bcc"/><text x="350" y="35" text-anchor="middle" font-size="18" font-weight="600" fill="#faf9f5">1. Trouver un club (fftir.org)</text>
 <line x1="350" y1="52" x2="350" y2="72" stroke="#777" stroke-width="1.5" marker-end="url(#a1)"/>
-<rect x="190" y="74" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="100" text-anchor="middle" font-size="13" fill="#8b6508">2. Séance découverte (30 a 50 €)</text>
+<rect x="190" y="74" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="100" text-anchor="middle" font-size="18" fill="#937430">2. Séance découverte (30 a 50 €)</text>
 <line x1="350" y1="116" x2="350" y2="136" stroke="#777" stroke-width="1.5" marker-end="url(#a1)"/>
-<rect x="190" y="138" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="164" text-anchor="middle" font-size="13" fill="#8b6508">3. Certificat médical (médecin traitant)</text>
+<rect x="190" y="138" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="164" text-anchor="middle" font-size="18" fill="#937430">3. Certificat médical (médecin traitant)</text>
 <line x1="350" y1="180" x2="350" y2="200" stroke="#777" stroke-width="1.5" marker-end="url(#a1)"/>
-<rect x="190" y="202" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="228" text-anchor="middle" font-size="13" fill="#8b6508">4. Inscription + paiement cotisation</text>
+<rect x="190" y="202" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="228" text-anchor="middle" font-size="18" fill="#937430">4. Inscription + paiement cotisation</text>
 <line x1="350" y1="244" x2="350" y2="264" stroke="#777" stroke-width="1.5" marker-end="url(#a1)"/>
-<rect x="190" y="266" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="292" text-anchor="middle" font-size="13" fill="#8b6508">5. Vérification FINIADA par le club</text>
+<rect x="190" y="266" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="292" text-anchor="middle" font-size="18" fill="#937430">5. Vérification FINIADA par le club</text>
 <line x1="350" y1="308" x2="350" y2="328" stroke="#777" stroke-width="1.5" marker-end="url(#a1)"/>
-<rect x="190" y="330" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/><text x="350" y="356" text-anchor="middle" font-size="13" fill="#8b6508">6. Licence EDEN (QR Code, ~2 semaines)</text>
+<rect x="190" y="330" width="320" height="42" rx="10" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/><text x="350" y="356" text-anchor="middle" font-size="18" fill="#937430">6. Licence EDEN (QR Code, ~2 semaines)</text>
 <line x1="350" y1="372" x2="350" y2="392" stroke="#777" stroke-width="1.5" marker-end="url(#a1)"/>
-<rect x="220" y="394" width="260" height="44" rx="22" fill="#4a7c59"/><text x="350" y="421" text-anchor="middle" font-size="14" font-weight="600" fill="white">🎯 École de tir (~8 semaines)</text>
+<rect x="220" y="394" width="260" height="44" rx="22" fill="#788c5d"/><text x="350" y="421" text-anchor="middle" font-size="18" font-weight="600" fill="#faf9f5"> École de tir (~8 semaines)</text>
 </svg>
 <div class="diagram-cap">Diagramme 1 : Parcours d'inscription complet, de la recherche du club à l'école de tir. Sources : FFTir, cibleblanche.fr.</div>
 </div>
@@ -108,33 +108,33 @@
 
 <div class="diagram">
 <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-<rect x="20" y="20" width="200" height="200" rx="14" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.5"/>
-<text x="120" y="50" text-anchor="middle" font-size="14" font-weight="700" fill="#3a5a3f">PART FÉDÉRALE</text>
-<text x="120" y="80" text-anchor="middle" font-size="32" font-weight="700" fill="#4a7c59">69 €</text>
-<text x="120" y="100" text-anchor="middle" font-size="12" fill="#555">Adulte (49 € jeune)</text>
-<text x="120" y="125" text-anchor="middle" font-size="11" fill="#888">Fixée par la FFTir</text>
-<text x="120" y="145" text-anchor="middle" font-size="11" fill="#888">Identique partout</text>
-<text x="120" y="165" text-anchor="middle" font-size="11" fill="#888">Inclut l'assurance RC</text>
+<rect x="20" y="20" width="200" height="200" rx="14" fill="#f0f3ec" stroke="#788c5d" stroke-width="1.5"/>
+<text x="120" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">PART FÉDÉRALE</text>
+<text x="120" y="80" text-anchor="middle" font-size="32" font-weight="700" fill="#788c5d">69 €</text>
+<text x="120" y="100" text-anchor="middle" font-size="18" fill="#555">Adulte (49 € jeune)</text>
+<text x="120" y="125" text-anchor="middle" font-size="18" fill="#888">Fixée par la FFTir</text>
+<text x="120" y="145" text-anchor="middle" font-size="18" fill="#888">Identique partout</text>
+<text x="120" y="165" text-anchor="middle" font-size="18" fill="#888">Inclut l'assurance RC</text>
 
 <text x="245" y="120" text-anchor="middle" font-size="28" font-weight="700" fill="#888">+</text>
 
-<rect x="270" y="20" width="200" height="200" rx="14" fill="#f5ecd4" stroke="#b8860b" stroke-width="1.5"/>
-<text x="370" y="50" text-anchor="middle" font-size="14" font-weight="700" fill="#8b6508">COTISATION CLUB</text>
-<text x="370" y="80" text-anchor="middle" font-size="26" font-weight="700" fill="#b8860b">150 a 400 €</text>
-<text x="370" y="105" text-anchor="middle" font-size="12" fill="#555">Variable selon le club</text>
-<text x="370" y="130" text-anchor="middle" font-size="11" fill="#888">Installations, services</text>
-<text x="370" y="150" text-anchor="middle" font-size="11" fill="#888">Prêt d'armes souvent inclus</text>
-<text x="370" y="170" text-anchor="middle" font-size="11" fill="#888">Tarifs famille possibles</text>
+<rect x="270" y="20" width="200" height="200" rx="14" fill="#f9f3e6" stroke="#b8923e" stroke-width="1.5"/>
+<text x="370" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">COTISATION CLUB</text>
+<text x="370" y="80" text-anchor="middle" font-size="26" font-weight="700" fill="#b8923e">150 a 400 €</text>
+<text x="370" y="105" text-anchor="middle" font-size="18" fill="#555">Variable selon le club</text>
+<text x="370" y="130" text-anchor="middle" font-size="18" fill="#888">Installations, services</text>
+<text x="370" y="150" text-anchor="middle" font-size="18" fill="#888">Prêt d'armes souvent inclus</text>
+<text x="370" y="170" text-anchor="middle" font-size="18" fill="#888">Tarifs famille possibles</text>
 
 <text x="495" y="120" text-anchor="middle" font-size="28" font-weight="700" fill="#888">=</text>
 
-<rect x="520" y="20" width="160" height="200" rx="14" fill="#c4553a" stroke="#8b3a28" stroke-width="1.5"/>
-<text x="600" y="50" text-anchor="middle" font-size="14" font-weight="700" fill="white">BUDGET TOTAL</text>
-<text x="600" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="white">PREMIÈRE ANNÉE</text>
-<text x="600" y="120" text-anchor="middle" font-size="30" font-weight="700" fill="white">250</text>
-<text x="600" y="145" text-anchor="middle" font-size="16" font-weight="600" fill="#fdd">a 550 €</text>
-<text x="600" y="175" text-anchor="middle" font-size="11" fill="#fdd">Matériel prêté</text>
-<text x="600" y="195" text-anchor="middle" font-size="11" fill="#fdd">la 1ère année</text>
+<rect x="520" y="20" width="160" height="200" rx="14" fill="#d97757" stroke="#b05a3a" stroke-width="1.5"/>
+<text x="600" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#faf9f5">BUDGET TOTAL</text>
+<text x="600" y="80" text-anchor="middle" font-size="18" font-weight="700" fill="#faf9f5">PREMIÈRE ANNÉE</text>
+<text x="600" y="120" text-anchor="middle" font-size="30" font-weight="700" fill="#faf9f5">250</text>
+<text x="600" y="145" text-anchor="middle" font-size="18" font-weight="600" fill="#fdd">a 550 €</text>
+<text x="600" y="175" text-anchor="middle" font-size="18" fill="#fdd">Matériel prêté</text>
+<text x="600" y="195" text-anchor="middle" font-size="18" fill="#fdd">la 1ère année</text>
 </svg>
 <div class="diagram-cap">Diagramme 2 : Décomposition du budget première année. La part fédérale est fixe, la cotisation club varie. Sources : FFTir 2025/2026, info.fr.</div>
 </div>
@@ -143,29 +143,29 @@
 
 <div class="diagram">
 <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-<rect x="20" y="20" width="150" height="120" rx="12" fill="#faf9f5" stroke="#c4553a" stroke-width="1.5"/>
-<text x="95" y="50" text-anchor="middle" font-size="24">🪪</text>
-<text x="95" y="74" text-anchor="middle" font-size="12" font-weight="600" fill="#c4553a">Pièce d'identité</text>
-<text x="95" y="92" text-anchor="middle" font-size="10" fill="#888">CNI ou passeport</text>
-<text x="95" y="108" text-anchor="middle" font-size="10" fill="#888">en cours de validité</text>
+<rect x="20" y="20" width="150" height="120" rx="12" fill="#faf9f5" stroke="#d97757" stroke-width="1.5"/>
+<text x="95" y="50" text-anchor="middle" font-size="24"></text>
+<text x="95" y="74" text-anchor="middle" font-size="18" font-weight="600" fill="#d97757">Pièce d'identité</text>
+<text x="95" y="92" text-anchor="middle" font-size="18" fill="#888">CNI ou passeport</text>
+<text x="95" y="108" text-anchor="middle" font-size="18" fill="#888">en cours de validité</text>
 
-<rect x="190" y="20" width="150" height="120" rx="12" fill="#faf9f5" stroke="#4a7c59" stroke-width="1.5"/>
-<text x="265" y="50" text-anchor="middle" font-size="24">🏥</text>
-<text x="265" y="74" text-anchor="middle" font-size="12" font-weight="600" fill="#4a7c59">Certificat médical</text>
-<text x="265" y="92" text-anchor="middle" font-size="10" fill="#888">"Non contre-indication</text>
-<text x="265" y="108" text-anchor="middle" font-size="10" fill="#888">au tir sportif"</text>
+<rect x="190" y="20" width="150" height="120" rx="12" fill="#faf9f5" stroke="#788c5d" stroke-width="1.5"/>
+<text x="265" y="50" text-anchor="middle" font-size="24"></text>
+<text x="265" y="74" text-anchor="middle" font-size="18" font-weight="600" fill="#788c5d">Certificat médical</text>
+<text x="265" y="92" text-anchor="middle" font-size="18" fill="#888">"Non contre-indication</text>
+<text x="265" y="108" text-anchor="middle" font-size="18" fill="#888">au tir sportif"</text>
 
-<rect x="360" y="20" width="150" height="120" rx="12" fill="#faf9f5" stroke="#3a6b8c" stroke-width="1.5"/>
-<text x="435" y="50" text-anchor="middle" font-size="24">📸</text>
-<text x="435" y="74" text-anchor="middle" font-size="12" font-weight="600" fill="#3a6b8c">Photo d'identité</text>
-<text x="435" y="92" text-anchor="middle" font-size="10" fill="#888">Format standard</text>
-<text x="435" y="108" text-anchor="middle" font-size="10" fill="#888">récente</text>
+<rect x="360" y="20" width="150" height="120" rx="12" fill="#faf9f5" stroke="#6a9bcc" stroke-width="1.5"/>
+<text x="435" y="50" text-anchor="middle" font-size="24"></text>
+<text x="435" y="74" text-anchor="middle" font-size="18" font-weight="600" fill="#6a9bcc">Photo d'identité</text>
+<text x="435" y="92" text-anchor="middle" font-size="18" fill="#888">Format standard</text>
+<text x="435" y="108" text-anchor="middle" font-size="18" fill="#888">récente</text>
 
-<rect x="530" y="20" width="150" height="120" rx="12" fill="#faf9f5" stroke="#b8860b" stroke-width="1.5"/>
-<text x="605" y="50" text-anchor="middle" font-size="24">👶</text>
-<text x="605" y="74" text-anchor="middle" font-size="12" font-weight="600" fill="#b8860b">Si mineur</text>
-<text x="605" y="92" text-anchor="middle" font-size="10" fill="#888">Autorisation parentale</text>
-<text x="605" y="108" text-anchor="middle" font-size="10" fill="#888">+ âge min. 10/12 ans</text>
+<rect x="530" y="20" width="150" height="120" rx="12" fill="#faf9f5" stroke="#b8923e" stroke-width="1.5"/>
+<text x="605" y="50" text-anchor="middle" font-size="24"></text>
+<text x="605" y="74" text-anchor="middle" font-size="18" font-weight="600" fill="#b8923e">Si mineur</text>
+<text x="605" y="92" text-anchor="middle" font-size="18" fill="#888">Autorisation parentale</text>
+<text x="605" y="108" text-anchor="middle" font-size="18" fill="#888">+ âge min. 10/12 ans</text>
 </svg>
 <div class="diagram-cap">Diagramme 3 : Les 4 documents à préparer avant de vous rendre au club. Source : FFTir.</div>
 </div>
@@ -176,25 +176,25 @@
 <div class="diagram">
 <svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
 <defs><marker id="a2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#777"/></marker></defs>
-<rect x="20" y="30" width="140" height="80" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.5"/>
-<text x="90" y="60" text-anchor="middle" font-size="20">📝</text>
-<text x="90" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#2a4f6b">Inscription club</text>
-<text x="90" y="96" text-anchor="middle" font-size="10" fill="#888">+ paiement</text>
+<rect x="20" y="30" width="140" height="80" rx="10" fill="#eef4f9" stroke="#6a9bcc" stroke-width="1.5"/>
+<text x="90" y="60" text-anchor="middle" font-size="20"></text>
+<text x="90" y="82" text-anchor="middle" font-size="18" font-weight="600" fill="#4a7ba8">Inscription club</text>
+<text x="90" y="96" text-anchor="middle" font-size="18" fill="#888">+ paiement</text>
 <line x1="160" y1="70" x2="188" y2="70" stroke="#777" stroke-width="1.5" marker-end="url(#a2)"/>
-<rect x="190" y="30" width="140" height="80" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.5"/>
-<text x="260" y="60" text-anchor="middle" font-size="20">🔍</text>
-<text x="260" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#2a4f6b">Vérification</text>
-<text x="260" y="96" text-anchor="middle" font-size="10" fill="#888">FINIADA</text>
+<rect x="190" y="30" width="140" height="80" rx="10" fill="#eef4f9" stroke="#6a9bcc" stroke-width="1.5"/>
+<text x="260" y="60" text-anchor="middle" font-size="20"></text>
+<text x="260" y="82" text-anchor="middle" font-size="18" font-weight="600" fill="#4a7ba8">Vérification</text>
+<text x="260" y="96" text-anchor="middle" font-size="18" fill="#888">FINIADA</text>
 <line x1="330" y1="70" x2="358" y2="70" stroke="#777" stroke-width="1.5" marker-end="url(#a2)"/>
-<rect x="360" y="30" width="140" height="80" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.5"/>
-<text x="430" y="60" text-anchor="middle" font-size="20">✅</text>
-<text x="430" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#2a4f6b">Validation club</text>
-<text x="430" y="96" text-anchor="middle" font-size="10" fill="#888">~2 semaines</text>
+<rect x="360" y="30" width="140" height="80" rx="10" fill="#eef4f9" stroke="#6a9bcc" stroke-width="1.5"/>
+<text x="430" y="60" text-anchor="middle" font-size="20"></text>
+<text x="430" y="82" text-anchor="middle" font-size="18" font-weight="600" fill="#4a7ba8">Validation club</text>
+<text x="430" y="96" text-anchor="middle" font-size="18" fill="#888">~2 semaines</text>
 <line x1="500" y1="70" x2="528" y2="70" stroke="#777" stroke-width="1.5" marker-end="url(#a2)"/>
-<rect x="530" y="30" width="150" height="80" rx="10" fill="#4a7c59" stroke="#3a5a3f" stroke-width="1.5"/>
-<text x="605" y="58" text-anchor="middle" font-size="20">📱</text>
-<text x="605" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="white">QR Code EDEN</text>
-<text x="605" y="96" text-anchor="middle" font-size="10" fill="#d4e8da">Licence active !</text>
+<rect x="530" y="30" width="150" height="80" rx="10" fill="#788c5d" stroke="#5a6e48" stroke-width="1.5"/>
+<text x="605" y="58" text-anchor="middle" font-size="20"></text>
+<text x="605" y="80" text-anchor="middle" font-size="18" font-weight="700" fill="#faf9f5">QR Code EDEN</text>
+<text x="605" y="96" text-anchor="middle" font-size="18" fill="#f0f3ec">Licence active !</text>
 </svg>
 <div class="diagram-cap">Diagramme 4 : Le parcours de validation de la licence sur EDEN. Source : FFTir, plateforme EDEN.</div>
 </div>
@@ -203,26 +203,26 @@
 
 <div class="diagram">
 <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-<rect x="20" y="20" width="200" height="160" rx="12" fill="#faf9f5" stroke="#c4553a" stroke-width="1.5"/>
-<text x="120" y="50" text-anchor="middle" font-size="24">📍</text>
-<text x="120" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#c4553a">Proximité</text>
-<text x="120" y="96" text-anchor="middle" font-size="11" fill="#555">Distance domicile/travail</text>
-<text x="120" y="114" text-anchor="middle" font-size="11" fill="#555">Horaires compatibles</text>
-<text x="120" y="132" text-anchor="middle" font-size="11" fill="#555">avec votre emploi du temps</text>
+<rect x="20" y="20" width="200" height="160" rx="12" fill="#faf9f5" stroke="#d97757" stroke-width="1.5"/>
+<text x="120" y="50" text-anchor="middle" font-size="24"></text>
+<text x="120" y="74" text-anchor="middle" font-size="18" font-weight="600" fill="#d97757">Proximité</text>
+<text x="120" y="96" text-anchor="middle" font-size="18" fill="#555">Distance domicile/travail</text>
+<text x="120" y="114" text-anchor="middle" font-size="18" fill="#555">Horaires compatibles</text>
+<text x="120" y="132" text-anchor="middle" font-size="18" fill="#555">avec votre emploi du temps</text>
 
-<rect x="250" y="20" width="200" height="160" rx="12" fill="#faf9f5" stroke="#4a7c59" stroke-width="1.5"/>
-<text x="350" y="50" text-anchor="middle" font-size="24">🎯</text>
-<text x="350" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#4a7c59">Disciplines</text>
-<text x="350" y="96" text-anchor="middle" font-size="11" fill="#555">Pistolet, carabine, plateau</text>
-<text x="350" y="114" text-anchor="middle" font-size="11" fill="#555">Distances disponibles</text>
-<text x="350" y="132" text-anchor="middle" font-size="11" fill="#555">10m, 25m, 50m, 200m ?</text>
+<rect x="250" y="20" width="200" height="160" rx="12" fill="#faf9f5" stroke="#788c5d" stroke-width="1.5"/>
+<text x="350" y="50" text-anchor="middle" font-size="24"></text>
+<text x="350" y="74" text-anchor="middle" font-size="18" font-weight="600" fill="#788c5d">Disciplines</text>
+<text x="350" y="96" text-anchor="middle" font-size="18" fill="#555">Pistolet, carabine, plateau</text>
+<text x="350" y="114" text-anchor="middle" font-size="18" fill="#555">Distances disponibles</text>
+<text x="350" y="132" text-anchor="middle" font-size="18" fill="#555">10m, 25m, 50m, 200m ?</text>
 
-<rect x="480" y="20" width="200" height="160" rx="12" fill="#faf9f5" stroke="#3a6b8c" stroke-width="1.5"/>
-<text x="580" y="50" text-anchor="middle" font-size="24">🤝</text>
-<text x="580" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#3a6b8c">Accueil</text>
-<text x="580" y="96" text-anchor="middle" font-size="11" fill="#555">Encadrement débutants</text>
-<text x="580" y="114" text-anchor="middle" font-size="11" fill="#555">Prêt de matériel inclus ?</text>
-<text x="580" y="132" text-anchor="middle" font-size="11" fill="#555">Ambiance du club</text>
+<rect x="480" y="20" width="200" height="160" rx="12" fill="#faf9f5" stroke="#6a9bcc" stroke-width="1.5"/>
+<text x="580" y="50" text-anchor="middle" font-size="24"></text>
+<text x="580" y="74" text-anchor="middle" font-size="18" font-weight="600" fill="#6a9bcc">Accueil</text>
+<text x="580" y="96" text-anchor="middle" font-size="18" fill="#555">Encadrement débutants</text>
+<text x="580" y="114" text-anchor="middle" font-size="18" fill="#555">Prêt de matériel inclus ?</text>
+<text x="580" y="132" text-anchor="middle" font-size="18" fill="#555">Ambiance du club</text>
 </svg>
 <div class="diagram-cap">Diagramme 5 : Les 3 critères clés pour choisir son club. Ne vous inscrivez pas sans avoir visité au moins 2 clubs. Source : conseils pratiques tireurs.</div>
 </div>

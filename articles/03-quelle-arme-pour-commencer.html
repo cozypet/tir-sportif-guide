@@ -4,10 +4,10 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f2f1ed; --card: #faf9f5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
-    --accent: #c4553a; --accent-light: #f0ddd6; --accent-dark: #8b3a28;
-    --blue: #3a6b8c; --blue-light: #d4e1eb; --green: #4a7c59; --green-light: #d4e8da;
-    --gold: #b8860b; --gold-light: #f5ecd4; --border: #d5d3ce; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --bg: #f2f1ed; --card: #faf9f5; --text: #141413; --text-secondary: #555; --text-muted: #888;
+    --accent: #d97757; --accent-light: #faf0eb; --accent-dark: #b05a3a;
+    --blue: #6a9bcc; --blue-light: #eef4f9; --green: #788c5d; --green-light: #f0f3ec;
+    --gold: #b8923e; --gold-light: #f9f3e6; --border: #e0ded6; --shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'IBM Plex Serif',Georgia,serif; background:var(--bg); color:var(--text); line-height:1.78; font-size:18px; -webkit-font-smoothing:antialiased; }
@@ -52,7 +52,7 @@
   tr:hover td { background:var(--accent-light); }
   .info-box { background:var(--blue-light); border:1.5px solid var(--blue); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .info-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
-  .warn-box { background:#fce4e4; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .warn-box { background:#faf0eb; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
   .warn-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
   @media (max-width:640px) { h1{font-size:28px;} .subtitle{font-size:17px;} .article{padding:28px 16px 64px;} .rule{flex-direction:column;gap:10px;} .rule-num{font-size:32px;} .diagram{padding:20px 12px 14px;} }
 </style></head><body>
@@ -79,23 +79,23 @@
 <div class="diagram">
 <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
 <defs><marker id="b1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#777"/></marker></defs>
-<rect x="20" y="40" width="180" height="120" rx="14" fill="#d4e8da" stroke="#4a7c59" stroke-width="2"/>
-<text x="110" y="70" text-anchor="middle" font-size="28">💨</text>
-<text x="110" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#3a5a3f">Air comprimé</text>
-<text x="110" y="114" text-anchor="middle" font-size="12" fill="#555">4,5 mm · 10 m</text>
-<text x="110" y="132" text-anchor="middle" font-size="11" fill="#888">~6 mois d'école</text>
+<rect x="20" y="40" width="180" height="120" rx="14" fill="#f0f3ec" stroke="#788c5d" stroke-width="2"/>
+<text x="110" y="70" text-anchor="middle" font-size="28"></text>
+<text x="110" y="96" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6e48">Air comprimé</text>
+<text x="110" y="114" text-anchor="middle" font-size="18" fill="#555">4,5 mm · 10 m</text>
+<text x="110" y="132" text-anchor="middle" font-size="18" fill="#888">~6 mois d'école</text>
 <line x1="200" y1="100" x2="240" y2="100" stroke="#777" stroke-width="2" marker-end="url(#b1)"/>
-<rect x="250" y="40" width="180" height="120" rx="14" fill="#f5ecd4" stroke="#b8860b" stroke-width="2"/>
-<text x="340" y="70" text-anchor="middle" font-size="28">🔫</text>
-<text x="340" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#8b6508">.22 LR</text>
-<text x="340" y="114" text-anchor="middle" font-size="12" fill="#555">25 m / 50 m</text>
-<text x="340" y="132" text-anchor="middle" font-size="11" fill="#888">Le calibre roi</text>
+<rect x="250" y="40" width="180" height="120" rx="14" fill="#f9f3e6" stroke="#b8923e" stroke-width="2"/>
+<text x="340" y="70" text-anchor="middle" font-size="28"></text>
+<text x="340" y="96" text-anchor="middle" font-size="18" font-weight="700" fill="#937430">.22 LR</text>
+<text x="340" y="114" text-anchor="middle" font-size="18" fill="#555">25 m / 50 m</text>
+<text x="340" y="132" text-anchor="middle" font-size="18" fill="#888">Le calibre roi</text>
 <line x1="430" y1="100" x2="470" y2="100" stroke="#777" stroke-width="2" marker-end="url(#b1)"/>
-<rect x="480" y="40" width="200" height="120" rx="14" fill="#fce4e4" stroke="#c4553a" stroke-width="2"/>
-<text x="580" y="70" text-anchor="middle" font-size="28">💥</text>
-<text x="580" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#c4553a">9 mm Para</text>
-<text x="580" y="114" text-anchor="middle" font-size="12" fill="#555">25 m · Cat. B</text>
-<text x="580" y="132" text-anchor="middle" font-size="11" fill="#888">Après ~12 mois</text>
+<rect x="480" y="40" width="200" height="120" rx="14" fill="#faf0eb" stroke="#d97757" stroke-width="2"/>
+<text x="580" y="70" text-anchor="middle" font-size="28"></text>
+<text x="580" y="96" text-anchor="middle" font-size="18" font-weight="700" fill="#d97757">9 mm Para</text>
+<text x="580" y="114" text-anchor="middle" font-size="18" fill="#555">25 m · Cat. B</text>
+<text x="580" y="132" text-anchor="middle" font-size="18" fill="#888">Après ~12 mois</text>
 </svg>
 <div class="diagram-cap">Diagramme 1 : Le parcours de progression classique du tireur débutant en France. Sources : clubs FFTir, forums tireurs.</div>
 </div>
@@ -114,11 +114,11 @@
 
 <div class="diagram">
 <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
-<text x="350" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a">Coût annuel estimé (200 coups/séance, 2 séances/mois)</text>
+<text x="350" y="20" text-anchor="middle" font-size="18" font-weight="700" fill="#141413">Coût annuel estimé (200 coups/séance, 2 séances/mois)</text>
 <!-- Barres -->
-<rect x="80" y="50" width="80" height="30" rx="4" fill="#4a7c59"/><text x="170" y="70" font-size="12" fill="#555">Air comprimé : ~10 €/an</text>
-<rect x="80" y="90" width="230" height="30" rx="4" fill="#b8860b"/><text x="320" y="110" font-size="12" fill="#555">.22 LR : ~384 €/an</text>
-<rect x="80" y="130" width="520" height="30" rx="4" fill="#c4553a"/><text x="610" y="150" font-size="12" fill="#555">9mm : ~1 248 €/an</text>
+<rect x="80" y="50" width="80" height="30" rx="4" fill="#788c5d"/><text x="170" y="70" font-size="18" fill="#555">Air comprimé : ~10 €/an</text>
+<rect x="80" y="90" width="230" height="30" rx="4" fill="#b8923e"/><text x="320" y="110" font-size="18" fill="#555">.22 LR : ~384 €/an</text>
+<rect x="80" y="130" width="520" height="30" rx="4" fill="#d97757"/><text x="610" y="150" font-size="18" fill="#555">9mm : ~1 248 €/an</text>
 </svg>
 <div class="diagram-cap">Diagramme 2 : Le coût annuel des munitions pèse bien plus que le prix de l'arme. Le .22 LR reste le meilleur compromis progression/budget.</div>
 </div>
