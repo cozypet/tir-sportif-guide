@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les 5 erreurs techniques du débutant</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f2f1ed; --card: #faf9f5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --accent: #c4553a; --accent-light: #f0ddd6; --accent-dark: #8b3a28;
+    --blue: #3a6b8c; --blue-light: #d4e1eb; --green: #4a7c59; --green-light: #d4e8da;
+    --gold: #b8860b; --gold-light: #f5ecd4; --border: #d5d3ce; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'IBM Plex Serif',Georgia,serif; background:var(--bg); color:var(--text); line-height:1.78; font-size:18px; -webkit-font-smoothing:antialiased; }
+  .article { max-width:740px; margin:0 auto; padding:56px 28px 96px; }
+  .header { margin-bottom:44px; padding-bottom:36px; border-bottom:3px solid var(--accent); }
+  .kicker { font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:2px; color:var(--accent); margin-bottom:14px; }
+  h1 { font-family:'IBM Plex Sans',sans-serif; font-size:36px; font-weight:700; line-height:1.18; color:var(--text); margin-bottom:14px; letter-spacing:-0.5px; }
+  .subtitle { font-family:'IBM Plex Serif',serif; font-size:20px; color:var(--text-secondary); font-style:italic; line-height:1.5; }
+  .byline { font-family:'IBM Plex Sans',sans-serif; font-size:14px; color:var(--text-secondary); margin-top:18px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .pill { display:inline-block; background:var(--accent-light); color:var(--accent-dark); padding:3px 12px; border-radius:20px; font-weight:500; font-size:12px; }
+  .cta { background:var(--card); border-left:4px solid var(--accent); padding:20px 24px; margin:28px 0; border-radius:0 10px 10px 0; box-shadow:var(--shadow); }
+  .cta p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; margin-bottom:4px; color:var(--text-secondary); }
+  .tldr { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:26px 30px; margin:32px 0; box-shadow:var(--shadow); }
+  .tldr-label { font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); margin-bottom:14px; }
+  .tldr ul { list-style:none; }
+  .tldr li { font-family:'IBM Plex Sans',sans-serif; font-size:15px; padding:5px 0 5px 22px; position:relative; }
+  .tldr li::before { content:'→'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+  h2 { font-family:'IBM Plex Sans',sans-serif; font-size:27px; font-weight:700; margin-top:52px; margin-bottom:18px; color:var(--text); letter-spacing:-0.3px; }
+  h3 { font-family:'IBM Plex Sans',sans-serif; font-size:20px; font-weight:600; margin-top:36px; margin-bottom:12px; color:var(--accent-dark); }
+  p { margin-bottom:17px; }
+  .diagram { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:32px 24px 18px; margin:36px 0; text-align:center; overflow-x:auto; box-shadow:var(--shadow); }
+  .diagram svg { max-width:100%; height:auto; }
+  .diagram-cap { font-family:'IBM Plex Sans',sans-serif; font-size:13px; color:var(--text-muted); text-align:center; margin-top:14px; font-style:italic; line-height:1.5; }
+  .rule { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:22px 26px; margin:22px 0; display:flex; gap:22px; align-items:flex-start; box-shadow:var(--shadow); transition:border-color 0.2s; }
+  .rule:hover { border-color:var(--accent); }
+  .rule-num { font-family:'IBM Plex Sans',sans-serif; font-size:42px; font-weight:700; color:var(--accent); line-height:1; min-width:48px; opacity:0.85; }
+  .rule-body h4 { font-family:'IBM Plex Sans',sans-serif; font-size:17px; font-weight:600; margin-bottom:6px; }
+  .rule-body p { font-size:16px; margin-bottom:0; color:var(--text-secondary); line-height:1.65; }
+  .src { font-family:'IBM Plex Mono',monospace; font-size:11px; background:var(--accent-light); color:var(--accent-dark); padding:2px 8px; border-radius:4px; white-space:nowrap; margin-left:4px; }
+  ul.check { list-style:none; margin:18px 0; }
+  ul.check li { padding:5px 0 5px 26px; position:relative; font-size:17px; }
+  ul.check li::before { content:'✓'; position:absolute; left:2px; color:var(--green); font-weight:700; font-size:15px; }
+  blockquote { border-left:3px solid var(--accent); padding:14px 22px; margin:28px 0; background:var(--card); border-radius:0 10px 10px 0; font-style:italic; color:var(--text-secondary); box-shadow:var(--shadow); }
+  .credits { margin-top:52px; padding-top:28px; border-top:1.5px solid var(--border); }
+  .credits a { color:var(--blue); text-decoration:none; font-weight:500; }
+  .credits a:hover { text-decoration:underline; }
+  .credits li { font-family:'IBM Plex Sans',sans-serif; font-size:15px; margin-bottom:12px; padding-left:22px; position:relative; list-style:none; }
+  .credits li::before { content:'↗'; position:absolute; left:0; color:var(--blue); font-weight:600; }
+  table { width:100%; border-collapse:collapse; margin:24px 0; font-family:'IBM Plex Sans',sans-serif; font-size:15px; }
+  th { background:var(--accent); color:white; padding:12px 16px; text-align:left; font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:1px; }
+  td { padding:12px 16px; border-bottom:1px solid var(--border); background:var(--card); }
+  tr:hover td { background:var(--accent-light); }
+  .info-box { background:var(--blue-light); border:1.5px solid var(--blue); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .info-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
+  .warn-box { background:#fce4e4; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .warn-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
+  @media (max-width:640px) { h1{font-size:28px;} .subtitle{font-size:17px;} .article{padding:28px 16px 64px;} .rule{flex-direction:column;gap:10px;} .rule-num{font-size:32px;} .diagram{padding:20px 12px 14px;} }
+</style></head><body>
+<article class="article">
+<header class="header">
+  <div class="kicker">Signal Over Noise · Tir Sportif · Article 8/10</div>
+  <h1>Les 5 erreurs techniques du débutant</h1>
+  <div class="subtitle">Grip, anticipation, lâcher : les diagnostiquer et les corriger</div>
+  <div class="byline">Signal Over Noise <span class="pill">4 min de lecture</span></div>
+</header>
+<div class="cta"><p><strong>Avant de commencer !</strong></p><p>Si cet article vous aide, un 👏 et un follow font plaisir.</p></div>
+
+<div class="tldr"><div class="tldr-label">TL;DR</div><ul>
+<li><strong>Anticipation du recul</strong> (flinch) : la plus fréquente, détectable au dry-fire</li>
+<li><strong>Mauvaise prise en main</strong> (grip) : impacts dispersés dans toutes les directions</li>
+<li><strong>Lâcher brusque</strong> (jerking) : le doigt « tire » au lieu de « presser »</li>
+<li><strong>Respiration non contrôlée</strong> : les impacts montent et descendent</li>
+<li><strong>Visée trop longue</strong> : fatigue oculaire, tremblements, résultats qui se dégradent</li>
+</ul></div>
+
+<h2>Carte de diagnostic des impacts</h2>
+<div class="diagram">
+<svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+<!-- Cible -->
+<circle cx="350" cy="180" r="140" fill="#faf9f5" stroke="#d5d3ce" stroke-width="1"/>
+<circle cx="350" cy="180" r="110" fill="#faf9f5" stroke="#d5d3ce" stroke-width="1"/>
+<circle cx="350" cy="180" r="80" fill="#faf9f5" stroke="#d5d3ce" stroke-width="1"/>
+<circle cx="350" cy="180" r="50" fill="#faf9f5" stroke="#d5d3ce" stroke-width="1"/>
+<circle cx="350" cy="180" r="20" fill="#1a1a1a"/>
+<circle cx="350" cy="180" r="8" fill="#c4553a"/>
+
+<!-- Annotations -->
+<circle cx="310" cy="250" r="8" fill="#c4553a" opacity="0.6"/><circle cx="320" cy="240" r="8" fill="#c4553a" opacity="0.6"/><circle cx="300" cy="260" r="8" fill="#c4553a" opacity="0.6"/>
+<line x1="280" y1="270" x2="200" y2="310" stroke="#c4553a" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="80" y="310" font-size="12" font-weight="600" fill="#c4553a">Bas-gauche (droitier)</text>
+<text x="80" y="326" font-size="11" fill="#555">= Anticipation du recul</text>
+<text x="80" y="342" font-size="11" fill="#555">ou lâcher brusque</text>
+
+<circle cx="350" cy="100" r="8" fill="#3a6b8c" opacity="0.6"/><circle cx="340" cy="110" r="8" fill="#3a6b8c" opacity="0.6"/><circle cx="360" cy="90" r="8" fill="#3a6b8c" opacity="0.6"/>
+<line x1="370" y1="85" x2="520" y2="50" stroke="#3a6b8c" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="525" y="48" font-size="12" font-weight="600" fill="#3a6b8c">Haut (groupé)</text>
+<text x="525" y="64" font-size="11" fill="#555">= Respiration mal calée</text>
+
+<circle cx="270" cy="150" r="8" fill="#4a7c59" opacity="0.6"/><circle cx="430" cy="210" r="8" fill="#4a7c59" opacity="0.6"/><circle cx="310" cy="120" r="8" fill="#4a7c59" opacity="0.6"/><circle cx="400" cy="260" r="8" fill="#4a7c59" opacity="0.6"/>
+<line x1="440" y1="215" x2="540" y2="230" stroke="#4a7c59" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="545" y="228" font-size="12" font-weight="600" fill="#4a7c59">Dispersé partout</text>
+<text x="545" y="244" font-size="11" fill="#555">= Problème de grip</text>
+</svg>
+<div class="diagram-cap">Diagramme 1 : Carte de diagnostic pour un tireur droitier. Le pattern des impacts révèle l'erreur technique. Sources : instructeurs FFTir, forums spécialisés.</div>
+</div>
+
+<h2>Correction rapide</h2>
+<table>
+<tr><th>Erreur</th><th>Symptôme</th><th>Correction</th></tr>
+<tr><td>Anticipation</td><td>Bas-gauche (droitier)</td><td>Dry-fire intensif, « surprise break »</td></tr>
+<tr><td>Grip incorrect</td><td>Dispersion totale</td><td>Haut de la poignée, pouce de support vers l'avant</td></tr>
+<tr><td>Lâcher brusque</td><td>Bas-gauche aussi</td><td>Presser progressivement, « wall then break »</td></tr>
+<tr><td>Respiration</td><td>Vertical haut/bas</td><td>Pause respiratoire en apnée naturelle</td></tr>
+<tr><td>Visée trop longue</td><td>Dégradation au fil de la série</td><td>Max 8 sec de visée, reposer si tremblement</td></tr>
+</table>
+
+<blockquote>La règle d'or : si vos impacts se dégradent au cours de la série, vous visez trop longtemps. Reposez l'arme, respirez, recommencez.</blockquote>
+
+<div class="credits"><h2>Crédits</h2><ul>
+<li><a href="https://www.montirsportif.fr/pratique-du-tir/fftir/qcm-de-la-fftir/se-preparer-au-qcm-de-la-fftir" target="_blank">MonTirSportif : Apprentissage technique</a></li>
+<li><a href="https://progresseraupistolet.fr/debuter-le-tir-au-pistolet-au-25m-loisir-guide-pratique-et-astuces/" target="_blank">ProgresserAuPistolet : Guide technique 25m</a></li>
+</ul></div>
+
+</article></body></html>

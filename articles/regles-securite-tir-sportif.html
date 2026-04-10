@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les 4 lois qui protègent chaque tireur</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f2f1ed;
+    --card: #faf9f5;
+    --text: #1a1a1a;
+    --text-secondary: #555;
+    --text-muted: #888;
+    --accent: #c4553a;
+    --accent-light: #f0ddd6;
+    --accent-dark: #8b3a28;
+    --blue: #3a6b8c;
+    --blue-light: #d4e1eb;
+    --green: #4a7c59;
+    --green-light: #d4e8da;
+    --gold: #b8860b;
+    --gold-light: #f5ecd4;
+    --border: #d5d3ce;
+    --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.78;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .article {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 56px 28px 96px;
+  }
+
+  /* ── Header ── */
+  .header {
+    margin-bottom: 44px;
+    padding-bottom: 36px;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .kicker {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.18;
+    color: var(--text);
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+
+  .subtitle {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 20px;
+    color: var(--text-secondary);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .byline {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  /* ── CTA Box ── */
+  .cta {
+    background: var(--card);
+    border-left: 4px solid var(--accent);
+    padding: 20px 24px;
+    margin: 28px 0;
+    border-radius: 0 10px 10px 0;
+    box-shadow: var(--shadow);
+  }
+  .cta p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: var(--text-secondary);
+  }
+
+  /* ── TL;DR ── */
+  .tldr {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin: 32px 0;
+    box-shadow: var(--shadow);
+  }
+  .tldr-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .tldr ul { list-style: none; }
+  .tldr li {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    padding: 5px 0 5px 22px;
+    position: relative;
+  }
+  .tldr li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ── Headings ── */
+  h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 52px;
+    margin-bottom: 18px;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+  h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 36px;
+    margin-bottom: 12px;
+    color: var(--accent-dark);
+  }
+
+  p { margin-bottom: 17px; }
+
+  /* ── Rule Cards ── */
+  .rule {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin: 22px 0;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    box-shadow: var(--shadow);
+    transition: border-color 0.2s;
+  }
+  .rule:hover { border-color: var(--accent); }
+  .rule-num {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 48px;
+    opacity: 0.85;
+  }
+  .rule-body h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .rule-body p {
+    font-size: 16px;
+    margin-bottom: 0;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+  .src {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-left: 4px;
+  }
+
+  /* ── Diagram Container ── */
+  .diagram {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 32px 24px 18px;
+    margin: 36px 0;
+    text-align: center;
+    overflow-x: auto;
+    box-shadow: var(--shadow);
+  }
+  .diagram svg { max-width: 100%; height: auto; }
+  .diagram-cap {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 14px;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* ── Lists ── */
+  ul.check { list-style: none; margin: 18px 0; }
+  ul.check li {
+    padding: 5px 0 5px 26px;
+    position: relative;
+    font-size: 17px;
+  }
+  ul.check li::before {
+    content: '✓';
+    position: absolute; left: 2px;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  /* ── Blockquote ── */
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 14px 22px;
+    margin: 28px 0;
+    background: var(--card);
+    border-radius: 0 10px 10px 0;
+    font-style: italic;
+    color: var(--text-secondary);
+    box-shadow: var(--shadow);
+  }
+
+  /* ── Credits ── */
+  .credits {
+    margin-top: 52px;
+    padding-top: 28px;
+    border-top: 1.5px solid var(--border);
+  }
+  .credits a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .credits a:hover { text-decoration: underline; }
+  .credits li {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-left: 22px;
+    position: relative;
+  }
+  .credits li::before {
+    content: '↗';
+    position: absolute; left: 0;
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; }
+    .subtitle { font-size: 17px; }
+    .article { padding: 28px 16px 64px; }
+    .rule { flex-direction: column; gap: 10px; }
+    .rule-num { font-size: 32px; }
+    .diagram { padding: 20px 12px 14px; }
+  }
+</style>
+</head>
+<body>
+<article class="article">
+
+<!-- ═══════════════════════ HEADER ═══════════════════════ -->
+<header class="header">
+  <div class="kicker">Signal Over Noise · Tir Sportif</div>
+  <h1>Les 4 lois qui protègent chaque tireur</h1>
+  <div class="subtitle">Guide visuel et sourcé des règles de sécurité que tout débutant doit intérioriser avant de toucher une arme</div>
+  <div class="byline">
+    Signal Over Noise
+    <span class="pill">4 min de lecture</span>
+  </div>
+</header>
+
+<!-- ═══════════════════════ CTA ═══════════════════════ -->
+<div class="cta">
+  <p><strong>Avant de commencer !</strong></p>
+  <p>Si cet article vous aide (ou aide quelqu'un que vous connaissez) à débuter le tir en sécurité, un 👏 et un follow font plaisir. Lien ami disponible sur demande.</p>
+</div>
+
+<!-- ═══════════════════════ HOOK ═══════════════════════ -->
+<p>Un tireur de compétition m'a un jour confié que la différence entre une séance de tir « sans histoire » et un drame ne tient ni au talent, ni au matériel, ni à l'expérience. Elle tient à quatre phrases, gravées dans la mémoire musculaire.</p>
+
+<p>Ces quatre règles, formalisées par le Colonel Jeff Cooper à la Gunsite Academy et adoptées (avec des variations mineures) par la NRA, le NSSF, la FFTir et l'ISSF, forment un système de défense en couches. Si une règle est violée, les trois autres vous protègent encore. Si deux sont violées simultanément, vous êtes à une contraction de doigt d'un accident irréversible.</p>
+
+<p>Cet article les présente visuellement, avec 6 diagrammes, pour que vous reteniez la logique et pas seulement les mots.</p>
+
+<!-- ═══════════════════════ TL;DR ═══════════════════════ -->
+<div class="tldr">
+  <div class="tldr-label">TL;DR</div>
+  <ul>
+    <li>4 règles universelles forment un <strong>filet de sécurité redondant</strong> : si l'une échoue, les autres empêchent la blessure</li>
+    <li>Elles sont communes à la NRA (USA), la FFTir (France) et l'ISSF (international), avec des formulations légèrement différentes</li>
+    <li>Une arme possède 5 états distincts, de « assurée » à « prête à tirer » : les connaître évite les confusions fatales</li>
+    <li>Le protocole de transport (surtout en droit français) est strict : jamais d'arme chargée hors du pas de tir</li>
+    <li>Chaque accident de stand documenté implique la violation simultanée d'au moins 2 de ces 4 règles</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════ WHY IT MATTERS ═══════════════════════ -->
+<h2>Pourquoi c'est important</h2>
+
+<p>Le tir sportif est statistiquement l'un des loisirs les plus sûrs quand les règles sont respectées. Le NSSF rapporte moins de blessures par participant que le football, le vélo ou le ski. Mais la marge d'erreur est nulle : un seul départ accidentel peut être fatal. Ces règles existent précisément parce que les humains se fatiguent, se déconcentrent et deviennent trop confiants.</p>
+
+<p>En France, la FFTir impose à tout nouveau licencié de réussir un QCM (Questionnaire à Choix Multiples) avec un minimum de 12/15 aux questions de sécurité avant de pouvoir demander une autorisation de détention d'arme de catégorie B. Les règles ci-dessous en sont l'ossature.</p>
+
+<!-- ═══════════════════════ DIAGRAMME 1 : DÉFENSE EN COUCHES ═══════════════════════ -->
+<div class="diagram">
+  <svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+    <!-- Couche 1 -->
+    <rect x="20" y="16" width="640" height="365" rx="24" fill="none" stroke="#c4553a" stroke-width="2.5" stroke-dasharray="0"/>
+    <rect x="20" y="16" width="640" height="365" rx="24" fill="#c4553a" opacity="0.06"/>
+    <text x="52" y="50" font-size="13.5" font-weight="600" fill="#8b3a28">COUCHE 1 · Toujours considérer l'arme comme chargée</text>
+
+    <!-- Couche 2 -->
+    <rect x="54" y="66" width="572" height="295" rx="20" fill="none" stroke="#4a7c59" stroke-width="2" stroke-dasharray="0"/>
+    <rect x="54" y="66" width="572" height="295" rx="20" fill="#4a7c59" opacity="0.06"/>
+    <text x="82" y="96" font-size="13" font-weight="600" fill="#3a5a3f">COUCHE 2 · Ne jamais pointer vers ce qu'on ne veut pas détruire</text>
+
+    <!-- Couche 3 -->
+    <rect x="88" y="112" width="504" height="229" rx="16" fill="none" stroke="#3a6b8c" stroke-width="2"/>
+    <rect x="88" y="112" width="504" height="229" rx="16" fill="#3a6b8c" opacity="0.06"/>
+    <text x="112" y="140" font-size="13" font-weight="600" fill="#2a4f6b">COUCHE 3 · Index hors de la détente tant qu'on ne vise pas</text>
+
+    <!-- Couche 4 -->
+    <rect x="122" y="158" width="436" height="163" rx="12" fill="var(--card)" stroke="#b8860b" stroke-width="2"/>
+    <text x="146" y="186" font-size="13" font-weight="600" fill="#8b6508">COUCHE 4 · Identifier sa cible ET ce qu'il y a derrière</text>
+
+    <!-- Icône centrale -->
+    <circle cx="340" cy="256" r="38" fill="#c4553a" opacity="0.10"/>
+    <text x="340" y="252" text-anchor="middle" font-size="32">🎯</text>
+    <text x="340" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#c4553a">TIR SÛR</text>
+
+    <!-- Annotation flèche -->
+    <defs>
+      <marker id="ar" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#c4553a"/>
+      </marker>
+    </defs>
+    <line x1="620" y1="370" x2="620" y2="32" stroke="#c4553a" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+    <text x="640" y="210" font-size="11" fill="#8b3a28" font-weight="500" transform="rotate(-90,640,210)">Profondeur de redondance</text>
+  </svg>
+  <div class="diagram-cap">Diagramme 1 : Les 4 règles forment des couches de sécurité concentriques. Les 4 doivent être violées simultanément pour qu'une blessure survienne. Sources : NRA, Gunsite Academy, FFTir.</div>
+</div>
+
+<!-- ═══════════════════════ LES 4 RÈGLES ═══════════════════════ -->
+<h2>Les 4 règles, décortiquées</h2>
+
+<div class="rule">
+  <div class="rule-num">1</div>
+  <div class="rule-body">
+    <h4>Toujours considérer une arme comme chargée</h4>
+    <p>Même après l'avoir vérifiée vous-même. Même si quelqu'un vous dit qu'elle est vide. Cette règle installe la posture mentale. Comme l'écrivait le Col. Cooper : il ne s'agit pas de l'état objectif de la chambre, mais de l'attitude que l'on adopte à chaque manipulation. <span class="src">Gunsite / NRA / FFTir</span></p>
+  </div>
+</div>
+
+<div class="rule">
+  <div class="rule-num">2</div>
+  <div class="rule-body">
+    <h4>Ne jamais pointer le canon vers ce qu'on ne veut pas détruire</h4>
+    <p>La FFTir formule ceci ainsi : « une arme ne doit JAMAIS être dirigée vers soi ou vers quelqu'un. » Imaginez un laser infini partant du canon. Cette ligne invisible est la trajectoire de mort, en permanence. <span class="src">FFTir / NSSF</span></p>
+  </div>
+</div>
+
+<div class="rule">
+  <div class="rule-num">3</div>
+  <div class="rule-body">
+    <h4>Index hors de la détente tant que les organes de visée ne sont pas sur la cible</h4>
+    <p>L'index repose le long de la carcasse, au-dessus du pontet, jusqu'au moment exact où l'on va tirer. Le réflexe de préhension sympathique (le « sursaut de crispation ») est une réalité physiologique : si vous trébuchez avec le doigt sur la détente, vous tirerez. <span class="src">NRA / ISSF / FFTir</span></p>
+  </div>
+</div>
+
+<div class="rule">
+  <div class="rule-num">4</div>
+  <div class="rule-body">
+    <h4>Identifier sa cible et ce qu'il y a derrière</h4>
+    <p>Un projectile 9 mm peut parcourir plus de 1,5 km. Un .30-06 dépasse 4,5 km. Les balles traversent les murs, ricochent sur les surfaces dures et continuent au-delà des cibles molles. Vous êtes responsable de chaque projectile qui quitte votre canon. <span class="src">NSSF / FFTir</span></p>
+  </div>
+</div>
+
+<!-- ═══════════════════════ DIAGRAMME 2 : POSITION DU DOIGT ═══════════════════════ -->
+<div class="diagram">
+  <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+    <!-- ─── MAUVAIS ─── -->
+    <rect x="16" y="14" width="310" height="190" rx="14" fill="#fce4e4" stroke="#c4553a" stroke-width="1.5"/>
+    <text x="171" y="42" text-anchor="middle" font-size="15" font-weight="700" fill="#c4553a">✗ INCORRECT</text>
+
+    <!-- Arme simplifiée -->
+    <rect x="50" y="80" width="220" height="34" rx="5" fill="#6b6b6b"/>
+    <rect x="50" y="80" width="220" height="14" rx="5" fill="#7a7a7a"/>
+    <!-- Poignée -->
+    <rect x="160" y="114" width="48" height="58" rx="6" fill="#5a5a5a"/>
+    <!-- Pontet -->
+    <path d="M168,114 Q168,156 184,156 Q200,156 200,114" fill="none" stroke="#444" stroke-width="2.5"/>
+    <!-- Doigt SUR la détente -->
+    <ellipse cx="184" cy="136" rx="16" ry="8" fill="#c4553a" opacity="0.8"/>
+    <text x="184" y="140" text-anchor="middle" font-size="10" fill="white" font-weight="600">index</text>
+    <text x="171" y="192" text-anchor="middle" font-size="12" fill="#8b3a28" font-weight="500">Index dans le pontet</text>
+
+    <!-- ─── BON ─── -->
+    <rect x="354" y="14" width="310" height="190" rx="14" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.5"/>
+    <text x="509" y="42" text-anchor="middle" font-size="15" font-weight="700" fill="#4a7c59">✓ CORRECT</text>
+
+    <!-- Arme simplifiée -->
+    <rect x="388" y="80" width="220" height="34" rx="5" fill="#6b6b6b"/>
+    <rect x="388" y="80" width="220" height="14" rx="5" fill="#7a7a7a"/>
+    <!-- Poignée -->
+    <rect x="498" y="114" width="48" height="58" rx="6" fill="#5a5a5a"/>
+    <!-- Pontet -->
+    <path d="M506,114 Q506,156 522,156 Q538,156 538,114" fill="none" stroke="#444" stroke-width="2.5"/>
+    <!-- Doigt le long de la carcasse -->
+    <ellipse cx="510" cy="92" rx="16" ry="7" fill="#4a7c59" opacity="0.8"/>
+    <text x="510" y="96" text-anchor="middle" font-size="10" fill="white" font-weight="600">index</text>
+    <!-- Flèche indicatrice -->
+    <path d="M540,92 L558,92" stroke="#4a7c59" stroke-width="1.5" marker-end="url(#ag)"/>
+    <text x="564" y="96" font-size="9" fill="#3a5a3f" font-weight="500">le long</text>
+    <text x="564" y="107" font-size="9" fill="#3a5a3f" font-weight="500">du cadre</text>
+    <text x="509" y="192" text-anchor="middle" font-size="12" fill="#3a5a3f" font-weight="500">Index le long de la carcasse</text>
+
+    <defs>
+      <marker id="ag" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+        <polygon points="0 0, 7 2.5, 0 5" fill="#4a7c59"/>
+      </marker>
+    </defs>
+  </svg>
+  <div class="diagram-cap">Diagramme 2 : Placement de l'index. Le doigt de détente est le principal dispositif de sécurité de toute arme. Source : NRA Règle 3, QCM FFTir.</div>
+</div>
+
+<!-- ═══════════════════════ MODÈLE MENTAL : 5 ÉTATS ═══════════════════════ -->
+<h2>Modèle mental : les 5 états d'une arme</h2>
+
+<p>La FFTir définit un vocabulaire précis pour qualifier l'état d'une arme. Confondre ces états est l'une des premières causes d'accident lors des manipulations sur le pas de tir.</p>
+
+<!-- ═══════════════════════ DIAGRAMME 3 : ÉTATS ═══════════════════════ -->
+<div class="diagram">
+  <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+    <defs>
+      <marker id="aw" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#777"/>
+      </marker>
+      <linearGradient id="dg" x1="0" x2="1">
+        <stop offset="0%" stop-color="#4a7c59"/>
+        <stop offset="100%" stop-color="#c4553a"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Barre de gradient -->
+    <rect x="14" y="128" width="672" height="5" rx="2.5" fill="url(#dg)" opacity="0.5"/>
+    <text x="14" y="152" font-size="11" fill="#4a7c59" font-weight="600">← SÛR</text>
+    <text x="642" y="152" font-size="11" fill="#c4553a" font-weight="600">LÉTAL →</text>
+
+    <!-- État 1 -->
+    <rect x="14" y="26" width="118" height="80" rx="10" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.8"/>
+    <text x="73" y="56" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3a5a3f">Assurée</text>
+    <text x="73" y="74" text-anchor="middle" font-size="10" fill="#555">Culasse ouverte</text>
+    <text x="73" y="88" text-anchor="middle" font-size="10" fill="#555">Contrôlée vide</text>
+
+    <line x1="132" y1="66" x2="154" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#aw)"/>
+
+    <!-- État 2 -->
+    <rect x="156" y="26" width="118" height="80" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.8"/>
+    <text x="215" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">Désappro-</text>
+    <text x="215" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">visionnée</text>
+    <text x="215" y="88" text-anchor="middle" font-size="10" fill="#555">Plus de munitions</text>
+
+    <line x1="274" y1="66" x2="296" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#aw)"/>
+
+    <!-- État 3 -->
+    <rect x="298" y="26" width="118" height="80" rx="10" fill="#f5ecd4" stroke="#b8860b" stroke-width="1.8"/>
+    <text x="357" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#8b6508">Appro-</text>
+    <text x="357" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#8b6508">visionnée</text>
+    <text x="357" y="88" text-anchor="middle" font-size="10" fill="#555">Munitions, pas en</text>
+    <text x="357" y="101" text-anchor="middle" font-size="10" fill="#555">chambre</text>
+
+    <line x1="416" y1="66" x2="438" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#aw)"/>
+
+    <!-- État 4 -->
+    <rect x="440" y="26" width="108" height="80" rx="10" fill="#fce4e4" stroke="#c4553a" stroke-width="1.8"/>
+    <text x="494" y="56" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c4553a">Chargée</text>
+    <text x="494" y="74" text-anchor="middle" font-size="10" fill="#555">Munition en</text>
+    <text x="494" y="88" text-anchor="middle" font-size="10" fill="#555">chambre</text>
+
+    <line x1="548" y1="66" x2="570" y2="66" stroke="#777" stroke-width="1.5" marker-end="url(#aw)"/>
+
+    <!-- État 5 -->
+    <rect x="572" y="26" width="114" height="80" rx="10" fill="#c4553a" stroke="#8b3a28" stroke-width="1.8"/>
+    <text x="629" y="56" text-anchor="middle" font-size="12.5" font-weight="700" fill="white">Prête à</text>
+    <text x="629" y="74" text-anchor="middle" font-size="12.5" font-weight="700" fill="white">tirer</text>
+    <text x="629" y="92" text-anchor="middle" font-size="10" fill="#fdd">Action sur détente</text>
+    <text x="629" y="105" text-anchor="middle" font-size="10" fill="#fdd">= départ du coup</text>
+  </svg>
+  <div class="diagram-cap">Diagramme 3 : Les 5 états d'une arme selon la FFTir. Chaque étape augmente le risque et exige une action explicite et délibérée. Source : Manuel de découverte du Tireur Sportif, FFTir.</div>
+</div>
+
+<!-- ═══════════════════════ DIAGRAMME 4 : ZONES DU STAND ═══════════════════════ -->
+<h2>Au stand : zones et protocole</h2>
+
+<p>Un stand de tir est divisé en zones clairement définies. Comprendre ces zones est la première chose que le directeur de tir vous expliquera. Principe fondamental : les armes ne sont manipulées qu'au pas de tir, canon orienté vers les cibles, et uniquement lorsque le tir est déclaré « ouvert ».</p>
+
+<div class="diagram">
+  <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+    <!-- Zone sécurisée -->
+    <rect x="16" y="16" width="130" height="224" rx="12" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.5"/>
+    <text x="81" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#3a5a3f">ZONE</text>
+    <text x="81" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#3a5a3f">SÉCURISÉE</text>
+    <text x="81" y="82" text-anchor="middle" font-size="10" fill="#555">Armes en mallette</text>
+    <text x="81" y="98" text-anchor="middle" font-size="10" fill="#555">Cordon de sécurité</text>
+    <text x="81" y="114" text-anchor="middle" font-size="10" fill="#555">visible dans le canon</text>
+    <text x="81" y="140" text-anchor="middle" font-size="20">🧳</text>
+
+    <!-- Pas de tir -->
+    <rect x="162" y="16" width="150" height="224" rx="12" fill="#f5ecd4" stroke="#b8860b" stroke-width="1.5"/>
+    <text x="237" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#8b6508">PAS DE TIR</text>
+    <text x="237" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#8b6508">(Ligne de feu)</text>
+    <text x="237" y="82" text-anchor="middle" font-size="10" fill="#555">Arme sortie, manipulée</text>
+    <text x="237" y="98" text-anchor="middle" font-size="10" fill="#555">Canon → cibles</text>
+    <text x="237" y="114" text-anchor="middle" font-size="10" fill="#555">uniquement</text>
+    <!-- Tireurs -->
+    <text x="200" y="168" font-size="28">🧍</text>
+    <text x="240" y="168" font-size="28">🧍</text>
+
+    <!-- Zone de tir -->
+    <rect x="328" y="16" width="238" height="224" rx="12" fill="#fce4e4" stroke="#c4553a" stroke-width="1.5"/>
+    <text x="447" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#c4553a">ZONE DE TIR</text>
+    <text x="447" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#c4553a">(Downrange)</text>
+    <text x="447" y="82" text-anchor="middle" font-size="10" fill="#555">Accès UNIQUEMENT</text>
+    <text x="447" y="98" text-anchor="middle" font-size="10" fill="#555">lorsque le tir est « froid »</text>
+    <!-- Cibles -->
+    <circle cx="380" cy="160" r="22" fill="none" stroke="#c4553a" stroke-width="2"/>
+    <circle cx="380" cy="160" r="10" fill="#c4553a" opacity="0.25"/>
+    <circle cx="380" cy="160" r="3" fill="#c4553a"/>
+    <circle cx="447" cy="170" r="22" fill="none" stroke="#c4553a" stroke-width="2"/>
+    <circle cx="447" cy="170" r="10" fill="#c4553a" opacity="0.25"/>
+    <circle cx="447" cy="170" r="3" fill="#c4553a"/>
+    <circle cx="514" cy="155" r="22" fill="none" stroke="#c4553a" stroke-width="2"/>
+    <circle cx="514" cy="155" r="10" fill="#c4553a" opacity="0.25"/>
+    <circle cx="514" cy="155" r="3" fill="#c4553a"/>
+
+    <!-- Butte -->
+    <rect x="582" y="16" width="102" height="224" rx="12" fill="#d5d3ce" stroke="#999" stroke-width="1.5"/>
+    <text x="633" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="#555">BUTTE</text>
+    <text x="633" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#555">DE TIR</text>
+    <text x="633" y="82" text-anchor="middle" font-size="10" fill="#777">Pare-balles</text>
+    <text x="633" y="130" text-anchor="middle" font-size="32">🧱</text>
+
+    <!-- Flèche direction de tir -->
+    <defs>
+      <marker id="af" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#c4553a"/>
+      </marker>
+    </defs>
+    <line x1="275" y1="210" x2="350" y2="210" stroke="#c4553a" stroke-width="2.5" marker-end="url(#af)"/>
+    <text x="313" y="230" text-anchor="middle" font-size="11" fill="#c4553a" font-weight="600">Direction de tir</text>
+
+    <!-- Indicateurs chaud / froid -->
+    <rect x="162" y="260" width="90" height="28" rx="14" fill="#c4553a"/>
+    <text x="207" y="279" text-anchor="middle" font-size="12" fill="white" font-weight="600">🔴 CHAUD</text>
+    <text x="266" y="279" font-size="11" fill="#555">= Tir autorisé</text>
+
+    <rect x="420" y="260" width="86" height="28" rx="14" fill="#3a6b8c"/>
+    <text x="463" y="279" text-anchor="middle" font-size="12" fill="white" font-weight="600">🔵 FROID</text>
+    <text x="520" y="279" font-size="11" fill="#555">= Armes posées, accès cibles</text>
+  </svg>
+  <div class="diagram-cap">Diagramme 4 : Anatomie d'un stand de tir. Les armes ne sont manipulées qu'au pas de tir pendant la phase « chaude ». Sources : FFTir, directives de sécurité NSSF.</div>
+</div>
+
+<!-- ═══════════════════════ DIAGRAMME 5 : TRANSPORT ═══════════════════════ -->
+<h2>Transport : le protocole français</h2>
+
+<p>En droit français, transporter une arme sans motif légitime est interdit. Votre licence FFTir en cours de validité vaut titre de transport légitime. Mais l'arme doit malgré tout suivre un protocole strict.</p>
+
+<div class="diagram">
+  <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+    <defs>
+      <marker id="ab" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#777"/>
+      </marker>
+    </defs>
+
+    <!-- Départ -->
+    <rect x="195" y="8" width="270" height="46" rx="23" fill="#c4553a"/>
+    <text x="330" y="36" text-anchor="middle" font-size="14" font-weight="600" fill="white">🏠 DOMICILE : Arme dans le coffre</text>
+
+    <line x1="330" y1="54" x2="330" y2="76" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
+
+    <!-- Étape 1 -->
+    <rect x="155" y="78" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8860b" stroke-width="1.8"/>
+    <text x="178" y="105" font-size="13" fill="#8b6508" font-weight="600">1.</text>
+    <text x="198" y="105" font-size="13" fill="#8b6508">Désapprovisionner entièrement l'arme</text>
+
+    <line x1="330" y1="122" x2="330" y2="140" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
+
+    <!-- Étape 2 -->
+    <rect x="155" y="142" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8860b" stroke-width="1.8"/>
+    <text x="178" y="169" font-size="13" fill="#8b6508" font-weight="600">2.</text>
+    <text x="198" y="169" font-size="13" fill="#8b6508">Démonter ou poser un verrou de pontet</text>
+
+    <line x1="330" y1="186" x2="330" y2="204" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
+
+    <!-- Étape 3 -->
+    <rect x="155" y="206" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8860b" stroke-width="1.8"/>
+    <text x="178" y="233" font-size="13" fill="#8b6508" font-weight="600">3.</text>
+    <text x="198" y="233" font-size="13" fill="#8b6508">Placer dans une mallette ou housse fermée</text>
+
+    <line x1="330" y1="250" x2="330" y2="268" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
+
+    <!-- Étape 4 -->
+    <rect x="155" y="270" width="350" height="44" rx="10" fill="var(--card)" stroke="#b8860b" stroke-width="1.8"/>
+    <text x="178" y="297" font-size="13" fill="#8b6508" font-weight="600">4.</text>
+    <text x="198" y="297" font-size="13" fill="#8b6508">Munitions transportées séparément</text>
+
+    <!-- Encadré documents -->
+    <rect x="530" y="78" width="155" height="236" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.5"/>
+    <text x="607" y="102" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">Documents</text>
+    <text x="607" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">requis :</text>
+    <text x="542" y="142" font-size="11" fill="#333" font-weight="500">✓ Licence FFTir valide</text>
+    <text x="542" y="162" font-size="11" fill="#333" font-weight="500">✓ Carnet de tir (cat. B)</text>
+    <line x1="542" y1="176" x2="672" y2="176" stroke="#3a6b8c" stroke-width="0.5" opacity="0.4"/>
+    <text x="542" y="196" font-size="11" fill="#3a6b8c" font-style="italic">Conseillés :</text>
+    <text x="542" y="216" font-size="10.5" fill="#555">○ Autorisation de détention</text>
+    <text x="542" y="236" font-size="10.5" fill="#555">○ Facture de chaque arme</text>
+    <text x="542" y="256" font-size="10.5" fill="#555">○ Carte européenne</text>
+    <text x="548" y="272" font-size="10" fill="#888">(pour l'étranger)</text>
+
+    <!-- Arrivée -->
+    <line x1="330" y1="314" x2="330" y2="332" stroke="#777" stroke-width="1.5" marker-end="url(#ab)"/>
+    <rect x="195" y="334" width="270" height="46" rx="23" fill="#4a7c59"/>
+    <text x="330" y="362" text-anchor="middle" font-size="14" font-weight="600" fill="white">🎯 STAND : Ouverture au pas de tir</text>
+  </svg>
+  <div class="diagram-cap">Diagramme 5 : Protocole de transport français. L'arme doit être rendue immédiatement inutilisable pendant le trajet. Source : FFTir, Code pénal Art. R312.</div>
+</div>
+
+<!-- ═══════════════════════ DIAGRAMME 6 : INCIDENT ═══════════════════════ -->
+<h2>Que faire en cas de raté de percussion</h2>
+
+<p>Un raté de percussion (misfire) exige un protocole spécifique. Précipiter cette étape est l'une des sources d'accidents les plus documentées.</p>
+
+<div class="diagram">
+  <svg viewBox="0 0 700 270" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+    <defs>
+      <marker id="ax" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#777"/>
+      </marker>
+    </defs>
+
+    <!-- Étape 1 -->
+    <rect x="14" y="28" width="142" height="72" rx="10" fill="#fce4e4" stroke="#c4553a" stroke-width="1.8"/>
+    <text x="85" y="55" text-anchor="middle" font-size="12" font-weight="700" fill="#c4553a">CLIC, pas de</text>
+    <text x="85" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#c4553a">détonation</text>
+    <text x="85" y="90" text-anchor="middle" font-size="10" fill="#888">Raté détecté</text>
+
+    <line x1="156" y1="64" x2="180" y2="64" stroke="#777" stroke-width="1.5" marker-end="url(#ax)"/>
+
+    <!-- Étape 2 -->
+    <rect x="182" y="28" width="150" height="72" rx="10" fill="#f5ecd4" stroke="#b8860b" stroke-width="1.8"/>
+    <text x="257" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#8b6508">MAINTENIR</text>
+    <text x="257" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#8b6508">en direction cible</text>
+    <text x="257" y="88" text-anchor="middle" font-size="11" fill="#888">30 secondes min.</text>
+    <text x="257" y="100" text-anchor="middle" font-size="9.5" fill="#aaa">(risque de « long feu »)</text>
+
+    <line x1="332" y1="64" x2="356" y2="64" stroke="#777" stroke-width="1.5" marker-end="url(#ax)"/>
+
+    <!-- Étape 3 -->
+    <rect x="358" y="28" width="150" height="72" rx="10" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="1.8"/>
+    <text x="433" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">APPELER le</text>
+    <text x="433" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#2a4f6b">directeur de tir</text>
+    <text x="433" y="88" text-anchor="middle" font-size="11" fill="#888">Ne PAS quitter</text>
+    <text x="433" y="100" text-anchor="middle" font-size="11" fill="#888">le poste</text>
+
+    <line x1="508" y1="64" x2="532" y2="64" stroke="#777" stroke-width="1.5" marker-end="url(#ax)"/>
+
+    <!-- Étape 4 -->
+    <rect x="534" y="28" width="150" height="72" rx="10" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.8"/>
+    <text x="609" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#3a5a3f">METTRE</text>
+    <text x="609" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#3a5a3f">l'arme en</text>
+    <text x="609" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#3a5a3f">sécurité</text>
+
+    <!-- Zone avertissement -->
+    <rect x="100" y="140" width="500" height="100" rx="12" fill="var(--card)" stroke="#c4553a" stroke-width="2" stroke-dasharray="7,4"/>
+    <text x="350" y="170" text-anchor="middle" font-size="16" font-weight="700" fill="#c4553a">⚠ JAMAIS</text>
+    <text x="350" y="194" text-anchor="middle" font-size="13" fill="#555">Regarder dans le canon · Quitter le poste avec une munition</text>
+    <text x="350" y="214" text-anchor="middle" font-size="13" fill="#555">en chambre · Tenter de réparer derrière la ligne de tir</text>
+    <text x="350" y="234" text-anchor="middle" font-size="13" fill="#555">avec une arme encore armée</text>
+  </svg>
+  <div class="diagram-cap">Diagramme 6 : Protocole en cas de raté de percussion. Un « long feu » (départ retardé) peut se produire plusieurs secondes après l'action sur la détente. Sources : Circulaire de sécurité FFTir, procédures NRA.</div>
+</div>
+
+<!-- ═══════════════════════ CHECKLIST ═══════════════════════ -->
+<h2>Checklist d'action</h2>
+<ul class="check">
+  <li>Mémoriser les 4 règles jusqu'à pouvoir les réciter sans réfléchir</li>
+  <li>S'entraîner au réflexe « index le long du cadre » chez soi avec n'importe quel objet en main (perceuse, télécommande, outil)</li>
+  <li>Apprendre les 5 états de l'arme en français avant la première séance en club</li>
+  <li>Télécharger les supports de préparation au QCM FFTir sur <em>qcmfftirfacile.fr</em></li>
+  <li>Lors de la première visite au stand, se présenter au directeur de tir et demander le règlement intérieur</li>
+  <li>Toujours porter protections auditives ET oculaires, même en tant que spectateur</li>
+</ul>
+
+<!-- ═══════════════════════ RECAP ═══════════════════════ -->
+<h2>Récapitulatif et prochaines étapes</h2>
+
+<p>Les 4 règles ne sont pas des recommandations. Elles forment une architecture de sécurité redondante. Chaque accident de stand documenté remonte à la violation simultanée d'au moins deux d'entre elles. Votre objectif en tant que débutant n'est pas de les mémoriser pour un examen, mais de les graver en réflexes qui survivent à la fatigue, à l'excitation et à la déconcentration.</p>
+
+<p>Commencez petit : inscrivez-vous à une séance découverte dans le club FFTir le plus proche de chez vous. Les règles sont les mêmes partout. La culture de la sécurité est ce qui fait de la communauté du tir sportif l'une des plus disciplinées dans le monde des loisirs.</p>
+
+<blockquote>Un bon tireur est, d'abord et toujours, un tireur sûr.</blockquote>
+
+<!-- ═══════════════════════ CRÉDITS ═══════════════════════ -->
+<div class="credits">
+  <h2>Crédits et lectures complémentaires</h2>
+  <ul>
+    <li><a href="https://www.fftir.org/les-regles-de-securite/" target="_blank">FFTir : Les règles de sécurité</a> · Règles officielles de la fédération française, applicables à tous les licenciés</li>
+    <li><a href="https://gunsafetyrules.nra.org/" target="_blank">NRA : Gun Safety Rules</a> · Les 3 règles fondamentales + 7 règles complémentaires</li>
+    <li><a href="https://www.nssf.org/articles/4-primary-rules-of-firearm-safety/" target="_blank">NSSF : 4 Primary Rules of Firearm Safety</a> · Formulation de l'association professionnelle avec exemples pratiques</li>
+    <li><a href="https://citizenssafety.com/firearm-safety/" target="_blank">Citizens Safety Academy : Firearm Safety</a> · Comparaison des règles NRA et Gunsite (Col. Cooper)</li>
+    <li><a href="https://safeshooting.fr/securite-tir-les-basiques-pour-pratiquer-en-toute-confiance/" target="_blank">SafeShooting.fr : Sécurité Tir</a> · Guide francophone couvrant stand, domicile et terrain</li>
+    <li><a href="https://qcmfftirfacile.fr/" target="_blank">QCM FFTir Facile</a> · Entraînement gratuit au QCM de contrôle des connaissances FFTir (mis à jour jan. 2026)</li>
+  </ul>
+</div>
+
+</article>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quelle discipline choisir : précision, vitesse, plateaux</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f2f1ed; --card: #faf9f5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --accent: #c4553a; --accent-light: #f0ddd6; --accent-dark: #8b3a28;
+    --blue: #3a6b8c; --blue-light: #d4e1eb; --green: #4a7c59; --green-light: #d4e8da;
+    --gold: #b8860b; --gold-light: #f5ecd4; --border: #d5d3ce; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'IBM Plex Serif',Georgia,serif; background:var(--bg); color:var(--text); line-height:1.78; font-size:18px; -webkit-font-smoothing:antialiased; }
+  .article { max-width:740px; margin:0 auto; padding:56px 28px 96px; }
+  .header { margin-bottom:44px; padding-bottom:36px; border-bottom:3px solid var(--accent); }
+  .kicker { font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:2px; color:var(--accent); margin-bottom:14px; }
+  h1 { font-family:'IBM Plex Sans',sans-serif; font-size:36px; font-weight:700; line-height:1.18; color:var(--text); margin-bottom:14px; letter-spacing:-0.5px; }
+  .subtitle { font-family:'IBM Plex Serif',serif; font-size:20px; color:var(--text-secondary); font-style:italic; line-height:1.5; }
+  .byline { font-family:'IBM Plex Sans',sans-serif; font-size:14px; color:var(--text-secondary); margin-top:18px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .pill { display:inline-block; background:var(--accent-light); color:var(--accent-dark); padding:3px 12px; border-radius:20px; font-weight:500; font-size:12px; }
+  .cta { background:var(--card); border-left:4px solid var(--accent); padding:20px 24px; margin:28px 0; border-radius:0 10px 10px 0; box-shadow:var(--shadow); }
+  .cta p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; margin-bottom:4px; color:var(--text-secondary); }
+  .tldr { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:26px 30px; margin:32px 0; box-shadow:var(--shadow); }
+  .tldr-label { font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); margin-bottom:14px; }
+  .tldr ul { list-style:none; }
+  .tldr li { font-family:'IBM Plex Sans',sans-serif; font-size:15px; padding:5px 0 5px 22px; position:relative; }
+  .tldr li::before { content:'→'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+  h2 { font-family:'IBM Plex Sans',sans-serif; font-size:27px; font-weight:700; margin-top:52px; margin-bottom:18px; color:var(--text); letter-spacing:-0.3px; }
+  h3 { font-family:'IBM Plex Sans',sans-serif; font-size:20px; font-weight:600; margin-top:36px; margin-bottom:12px; color:var(--accent-dark); }
+  p { margin-bottom:17px; }
+  .diagram { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:32px 24px 18px; margin:36px 0; text-align:center; overflow-x:auto; box-shadow:var(--shadow); }
+  .diagram svg { max-width:100%; height:auto; }
+  .diagram-cap { font-family:'IBM Plex Sans',sans-serif; font-size:13px; color:var(--text-muted); text-align:center; margin-top:14px; font-style:italic; line-height:1.5; }
+  .rule { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:22px 26px; margin:22px 0; display:flex; gap:22px; align-items:flex-start; box-shadow:var(--shadow); transition:border-color 0.2s; }
+  .rule:hover { border-color:var(--accent); }
+  .rule-num { font-family:'IBM Plex Sans',sans-serif; font-size:42px; font-weight:700; color:var(--accent); line-height:1; min-width:48px; opacity:0.85; }
+  .rule-body h4 { font-family:'IBM Plex Sans',sans-serif; font-size:17px; font-weight:600; margin-bottom:6px; }
+  .rule-body p { font-size:16px; margin-bottom:0; color:var(--text-secondary); line-height:1.65; }
+  .src { font-family:'IBM Plex Mono',monospace; font-size:11px; background:var(--accent-light); color:var(--accent-dark); padding:2px 8px; border-radius:4px; white-space:nowrap; margin-left:4px; }
+  ul.check { list-style:none; margin:18px 0; }
+  ul.check li { padding:5px 0 5px 26px; position:relative; font-size:17px; }
+  ul.check li::before { content:'✓'; position:absolute; left:2px; color:var(--green); font-weight:700; font-size:15px; }
+  blockquote { border-left:3px solid var(--accent); padding:14px 22px; margin:28px 0; background:var(--card); border-radius:0 10px 10px 0; font-style:italic; color:var(--text-secondary); box-shadow:var(--shadow); }
+  .credits { margin-top:52px; padding-top:28px; border-top:1.5px solid var(--border); }
+  .credits a { color:var(--blue); text-decoration:none; font-weight:500; }
+  .credits a:hover { text-decoration:underline; }
+  .credits li { font-family:'IBM Plex Sans',sans-serif; font-size:15px; margin-bottom:12px; padding-left:22px; position:relative; list-style:none; }
+  .credits li::before { content:'↗'; position:absolute; left:0; color:var(--blue); font-weight:600; }
+  table { width:100%; border-collapse:collapse; margin:24px 0; font-family:'IBM Plex Sans',sans-serif; font-size:15px; }
+  th { background:var(--accent); color:white; padding:12px 16px; text-align:left; font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:1px; }
+  td { padding:12px 16px; border-bottom:1px solid var(--border); background:var(--card); }
+  tr:hover td { background:var(--accent-light); }
+  .info-box { background:var(--blue-light); border:1.5px solid var(--blue); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .info-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
+  .warn-box { background:#fce4e4; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .warn-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
+  @media (max-width:640px) { h1{font-size:28px;} .subtitle{font-size:17px;} .article{padding:28px 16px 64px;} .rule{flex-direction:column;gap:10px;} .rule-num{font-size:32px;} .diagram{padding:20px 12px 14px;} }
+</style></head><body>
+<article class="article">
+<header class="header">
+  <div class="kicker">Signal Over Noise · Tir Sportif · Article 10/10</div>
+  <h1>Quelle discipline choisir : précision, vitesse, plateaux</h1>
+  <div class="subtitle">Panorama visuel des disciplines FFTir pour trouver celle qui vous correspond</div>
+  <div class="byline">Signal Over Noise <span class="pill">4 min de lecture</span></div>
+</header>
+<div class="cta"><p><strong>Avant de commencer !</strong></p><p>Si cet article vous aide, un 👏 et un follow font plaisir.</p></div>
+
+<div class="tldr"><div class="tldr-label">TL;DR</div><ul>
+<li><strong>Tir de précision</strong> (10m, 25m, 50m) : la base, concentration et régularité</li>
+<li><strong>Tir sportif de vitesse (TSV)</strong> : parcours chronométré, dynamique, très populaire</li>
+<li><strong>Tir aux plateaux</strong> (ball-trap, skeet, fosse) : en extérieur, au fusil</li>
+<li><strong>Armes anciennes / réglementaires</strong> : pour les passionnés d'histoire</li>
+<li>La plupart des clubs proposent de tester plusieurs disciplines avant de choisir</li>
+</ul></div>
+
+<h2>Les grandes familles de disciplines</h2>
+<div class="diagram">
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+<rect x="20" y="20" width="160" height="220" rx="14" fill="#d4e8da" stroke="#4a7c59" stroke-width="2"/>
+<text x="100" y="50" text-anchor="middle" font-size="24">🎯</text>
+<text x="100" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#3a5a3f">PRÉCISION</text>
+<text x="100" y="100" text-anchor="middle" font-size="11" fill="#555">10m air comprimé</text>
+<text x="100" y="118" text-anchor="middle" font-size="11" fill="#555">25m pistolet</text>
+<text x="100" y="136" text-anchor="middle" font-size="11" fill="#555">50m carabine</text>
+<text x="100" y="154" text-anchor="middle" font-size="11" fill="#555">Bench rest</text>
+<text x="100" y="180" text-anchor="middle" font-size="10" fill="#888">Patience, régularité</text>
+<text x="100" y="198" text-anchor="middle" font-size="10" fill="#888">contrôle mental</text>
+<text x="100" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="#4a7c59">Discipline olympique</text>
+
+<rect x="200" y="20" width="160" height="220" rx="14" fill="#fce4e4" stroke="#c4553a" stroke-width="2"/>
+<text x="280" y="50" text-anchor="middle" font-size="24">⚡</text>
+<text x="280" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#c4553a">VITESSE</text>
+<text x="280" y="100" text-anchor="middle" font-size="11" fill="#555">TSV / IPSC</text>
+<text x="280" y="118" text-anchor="middle" font-size="11" fill="#555">Tir dynamique</text>
+<text x="280" y="136" text-anchor="middle" font-size="11" fill="#555">Steel Challenge</text>
+<text x="280" y="154" text-anchor="middle" font-size="11" fill="#555">TAR</text>
+<text x="280" y="180" text-anchor="middle" font-size="10" fill="#888">Dynamisme, rapidité</text>
+<text x="280" y="198" text-anchor="middle" font-size="10" fill="#888">gestion du stress</text>
+<text x="280" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="#c4553a">Très populaire en club</text>
+
+<rect x="380" y="20" width="160" height="220" rx="14" fill="#d4e1eb" stroke="#3a6b8c" stroke-width="2"/>
+<text x="460" y="50" text-anchor="middle" font-size="24">🥏</text>
+<text x="460" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#2a4f6b">PLATEAUX</text>
+<text x="460" y="100" text-anchor="middle" font-size="11" fill="#555">Fosse olympique</text>
+<text x="460" y="118" text-anchor="middle" font-size="11" fill="#555">Skeet</text>
+<text x="460" y="136" text-anchor="middle" font-size="11" fill="#555">Ball-trap</text>
+<text x="460" y="154" text-anchor="middle" font-size="11" fill="#555">Compak Sporting</text>
+<text x="460" y="180" text-anchor="middle" font-size="10" fill="#888">Extérieur, coordination</text>
+<text x="460" y="198" text-anchor="middle" font-size="10" fill="#888">instinct de visée</text>
+<text x="460" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="#3a6b8c">Discipline olympique</text>
+
+<rect x="560" y="20" width="120" height="220" rx="14" fill="#f5ecd4" stroke="#b8860b" stroke-width="2"/>
+<text x="620" y="50" text-anchor="middle" font-size="24">⚔</text>
+<text x="620" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#8b6508">ARMES</text>
+<text x="620" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="#8b6508">ANCIENNES</text>
+<text x="620" y="118" text-anchor="middle" font-size="11" fill="#555">Poudre noire</text>
+<text x="620" y="136" text-anchor="middle" font-size="11" fill="#555">Armes réglem.</text>
+<text x="620" y="154" text-anchor="middle" font-size="11" fill="#555">Silhouettes métal.</text>
+<text x="620" y="180" text-anchor="middle" font-size="10" fill="#888">Histoire, collection</text>
+<text x="620" y="198" text-anchor="middle" font-size="10" fill="#888">convivialité</text>
+<text x="620" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="#b8860b">Communauté passionnée</text>
+</svg>
+<div class="diagram-cap">Diagramme 1 : Les 4 grandes familles de disciplines FFTir. Chacune a sa culture, son rythme et son public. Source : FFTir, catalogue des disciplines.</div>
+</div>
+
+<h2>Quel profil pour quelle discipline ?</h2>
+<table>
+<tr><th>Vous aimez...</th><th>Discipline recommandée</th></tr>
+<tr><td>La concentration, le calme, la perfection du geste</td><td>Tir de précision 10m / 50m</td></tr>
+<tr><td>L'adrénaline, le chronomètre, le mouvement</td><td>TSV / IPSC / Steel Challenge</td></tr>
+<tr><td>Le plein air, l'instinct, les réflexes</td><td>Plateaux (skeet, fosse, compak)</td></tr>
+<tr><td>L'histoire militaire, la collection, la mécanique</td><td>Armes anciennes / réglementaires</td></tr>
+<tr><td>Le tir longue distance, la balistique</td><td>TLD / Bench rest / 300m</td></tr>
+</table>
+
+<div class="info-box"><p>💡 <strong>Conseil :</strong> la plupart des clubs proposent des séances de découverte multi-disciplines. Profitez de vos 6 premiers mois d'école de tir pour essayer un maximum de choses avant de vous spécialiser.</p></div>
+
+<blockquote>Il n'y a pas de mauvais choix de discipline. Il n'y a que des tireurs qui n'ont pas encore trouvé la leur.</blockquote>
+
+<div class="credits"><h2>Crédits</h2><ul>
+<li><a href="https://www.fftir.org/" target="_blank">FFTir : Catalogue des disciplines</a></li>
+<li><a href="https://letsgoshooting.org/new-shooters/" target="_blank">Let's Go Shooting : Guide new shooters</a></li>
+<li><a href="https://safeshooting.fr/reponses-aux-questions-frequentes-sur-la-pratique-du-tir-sportif-et-la-gestion-des-armes/" target="_blank">SafeShooting : FAQ tir sportif</a></li>
+</ul></div>
+
+</article></body></html>

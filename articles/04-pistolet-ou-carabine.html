@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pistolet ou carabine : quel choix pour un débutant</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f2f1ed; --card: #faf9f5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --accent: #c4553a; --accent-light: #f0ddd6; --accent-dark: #8b3a28;
+    --blue: #3a6b8c; --blue-light: #d4e1eb; --green: #4a7c59; --green-light: #d4e8da;
+    --gold: #b8860b; --gold-light: #f5ecd4; --border: #d5d3ce; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'IBM Plex Serif',Georgia,serif; background:var(--bg); color:var(--text); line-height:1.78; font-size:18px; -webkit-font-smoothing:antialiased; }
+  .article { max-width:740px; margin:0 auto; padding:56px 28px 96px; }
+  .header { margin-bottom:44px; padding-bottom:36px; border-bottom:3px solid var(--accent); }
+  .kicker { font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:2px; color:var(--accent); margin-bottom:14px; }
+  h1 { font-family:'IBM Plex Sans',sans-serif; font-size:36px; font-weight:700; line-height:1.18; color:var(--text); margin-bottom:14px; letter-spacing:-0.5px; }
+  .subtitle { font-family:'IBM Plex Serif',serif; font-size:20px; color:var(--text-secondary); font-style:italic; line-height:1.5; }
+  .byline { font-family:'IBM Plex Sans',sans-serif; font-size:14px; color:var(--text-secondary); margin-top:18px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .pill { display:inline-block; background:var(--accent-light); color:var(--accent-dark); padding:3px 12px; border-radius:20px; font-weight:500; font-size:12px; }
+  .cta { background:var(--card); border-left:4px solid var(--accent); padding:20px 24px; margin:28px 0; border-radius:0 10px 10px 0; box-shadow:var(--shadow); }
+  .cta p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; margin-bottom:4px; color:var(--text-secondary); }
+  .tldr { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:26px 30px; margin:32px 0; box-shadow:var(--shadow); }
+  .tldr-label { font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:2.5px; color:var(--accent); margin-bottom:14px; }
+  .tldr ul { list-style:none; }
+  .tldr li { font-family:'IBM Plex Sans',sans-serif; font-size:15px; padding:5px 0 5px 22px; position:relative; }
+  .tldr li::before { content:'→'; position:absolute; left:0; color:var(--accent); font-weight:700; }
+  h2 { font-family:'IBM Plex Sans',sans-serif; font-size:27px; font-weight:700; margin-top:52px; margin-bottom:18px; color:var(--text); letter-spacing:-0.3px; }
+  h3 { font-family:'IBM Plex Sans',sans-serif; font-size:20px; font-weight:600; margin-top:36px; margin-bottom:12px; color:var(--accent-dark); }
+  p { margin-bottom:17px; }
+  .diagram { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:32px 24px 18px; margin:36px 0; text-align:center; overflow-x:auto; box-shadow:var(--shadow); }
+  .diagram svg { max-width:100%; height:auto; }
+  .diagram-cap { font-family:'IBM Plex Sans',sans-serif; font-size:13px; color:var(--text-muted); text-align:center; margin-top:14px; font-style:italic; line-height:1.5; }
+  .rule { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:22px 26px; margin:22px 0; display:flex; gap:22px; align-items:flex-start; box-shadow:var(--shadow); transition:border-color 0.2s; }
+  .rule:hover { border-color:var(--accent); }
+  .rule-num { font-family:'IBM Plex Sans',sans-serif; font-size:42px; font-weight:700; color:var(--accent); line-height:1; min-width:48px; opacity:0.85; }
+  .rule-body h4 { font-family:'IBM Plex Sans',sans-serif; font-size:17px; font-weight:600; margin-bottom:6px; }
+  .rule-body p { font-size:16px; margin-bottom:0; color:var(--text-secondary); line-height:1.65; }
+  .src { font-family:'IBM Plex Mono',monospace; font-size:11px; background:var(--accent-light); color:var(--accent-dark); padding:2px 8px; border-radius:4px; white-space:nowrap; margin-left:4px; }
+  ul.check { list-style:none; margin:18px 0; }
+  ul.check li { padding:5px 0 5px 26px; position:relative; font-size:17px; }
+  ul.check li::before { content:'✓'; position:absolute; left:2px; color:var(--green); font-weight:700; font-size:15px; }
+  blockquote { border-left:3px solid var(--accent); padding:14px 22px; margin:28px 0; background:var(--card); border-radius:0 10px 10px 0; font-style:italic; color:var(--text-secondary); box-shadow:var(--shadow); }
+  .credits { margin-top:52px; padding-top:28px; border-top:1.5px solid var(--border); }
+  .credits a { color:var(--blue); text-decoration:none; font-weight:500; }
+  .credits a:hover { text-decoration:underline; }
+  .credits li { font-family:'IBM Plex Sans',sans-serif; font-size:15px; margin-bottom:12px; padding-left:22px; position:relative; list-style:none; }
+  .credits li::before { content:'↗'; position:absolute; left:0; color:var(--blue); font-weight:600; }
+  table { width:100%; border-collapse:collapse; margin:24px 0; font-family:'IBM Plex Sans',sans-serif; font-size:15px; }
+  th { background:var(--accent); color:white; padding:12px 16px; text-align:left; font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:1px; }
+  td { padding:12px 16px; border-bottom:1px solid var(--border); background:var(--card); }
+  tr:hover td { background:var(--accent-light); }
+  .info-box { background:var(--blue-light); border:1.5px solid var(--blue); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .info-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
+  .warn-box { background:#fce4e4; border:1.5px solid var(--accent); border-radius:14px; padding:22px 26px; margin:24px 0; }
+  .warn-box p { font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--text); margin-bottom:6px; }
+  @media (max-width:640px) { h1{font-size:28px;} .subtitle{font-size:17px;} .article{padding:28px 16px 64px;} .rule{flex-direction:column;gap:10px;} .rule-num{font-size:32px;} .diagram{padding:20px 12px 14px;} }
+</style></head><body>
+<article class="article">
+<header class="header">
+  <div class="kicker">Signal Over Noise · Tir Sportif · Article 4/10</div>
+  <h1>Pistolet ou carabine : quel choix pour un débutant</h1>
+  <div class="subtitle">Deux philosophies de tir, deux trajectoires de progression</div>
+  <div class="byline">Signal Over Noise <span class="pill">4 min de lecture</span></div>
+</header>
+<div class="cta"><p><strong>Avant de commencer !</strong></p><p>Si cet article vous aide, un 👏 et un follow font plaisir.</p></div>
+
+<div class="tldr"><div class="tldr-label">TL;DR</div><ul>
+<li>La <strong>carabine</strong> est plus facile pour débuter : 3 points d'appui, visée intuitive, progression rapide</li>
+<li>Le <strong>pistolet</strong> est plus exigeant techniquement mais ouvre plus de disciplines en compétition</li>
+<li>L'initiation en club commence souvent à la carabine 10 m air comprimé</li>
+<li>Le choix dépend de votre objectif : précision pure (carabine) ou polyvalence (pistolet)</li>
+<li>Rien n'empêche de pratiquer les deux : beaucoup de tireurs alternent</li>
+</ul></div>
+
+<h2>Deux armes, deux logiques</h2>
+<p>La carabine offre trois points de contact avec le corps (épaule, joue, mains), ce qui stabilise naturellement la visée. Le pistolet, tenu à bout de bras avec un seul point de contact, demande un contrôle musculaire et une concentration supérieurs. C'est pourquoi la plupart des clubs FFTir commencent l'initiation à la carabine.</p>
+
+<div class="diagram">
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, sans-serif">
+<rect x="20" y="20" width="320" height="160" rx="14" fill="#d4e8da" stroke="#4a7c59" stroke-width="1.5"/>
+<text x="180" y="50" text-anchor="middle" font-size="16" font-weight="700" fill="#3a5a3f">🎯 CARABINE</text>
+<text x="180" y="76" text-anchor="middle" font-size="12" fill="#555">3 points d'appui (épaule, joue, mains)</text>
+<text x="180" y="96" text-anchor="middle" font-size="12" fill="#555">Visée plus stable naturellement</text>
+<text x="180" y="116" text-anchor="middle" font-size="12" fill="#555">Progression rapide du groupement</text>
+<text x="180" y="136" text-anchor="middle" font-size="12" fill="#555">Disciplines : 10m, 50m, bench rest, TLD</text>
+<text x="180" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#4a7c59">Idéal pour : précision, patience</text>
+
+<rect x="360" y="20" width="320" height="160" rx="14" fill="#f5ecd4" stroke="#b8860b" stroke-width="1.5"/>
+<text x="520" y="50" text-anchor="middle" font-size="16" font-weight="700" fill="#8b6508">🔫 PISTOLET</text>
+<text x="520" y="76" text-anchor="middle" font-size="12" fill="#555">1 point de contact (mains seules)</text>
+<text x="520" y="96" text-anchor="middle" font-size="12" fill="#555">Exige contrôle musculaire fin</text>
+<text x="520" y="116" text-anchor="middle" font-size="12" fill="#555">Courbe d'apprentissage plus longue</text>
+<text x="520" y="136" text-anchor="middle" font-size="12" fill="#555">Disciplines : 10m, 25m, vitesse, TAR</text>
+<text x="520" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#b8860b">Idéal pour : polyvalence, dynamisme</text>
+</svg>
+<div class="diagram-cap">Diagramme 1 : Comparaison structurelle carabine vs pistolet. La carabine pardonne plus les erreurs de débutant.</div>
+</div>
+
+<table>
+<tr><th>Critère</th><th>Carabine</th><th>Pistolet</th></tr>
+<tr><td>Facilité de prise en main</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+<tr><td>Précision débutant</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+<tr><td>Variété de disciplines</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr>
+<tr><td>Budget d'entrée</td><td>Équivalent</td><td>Équivalent</td></tr>
+<tr><td>Encombrement</td><td>Plus volumineux</td><td>Compact</td></tr>
+</table>
+
+<blockquote>Le conseil unanime des formateurs FFTir : commencez par la carabine pour acquérir les fondamentaux du lâcher et de la visée, puis passez au pistolet si l'envie vous prend.</blockquote>
+
+<div class="credits"><h2>Crédits</h2><ul>
+<li><a href="https://dicodusport.fr/blog/quelle-arme-choisir-pour-pratiquer-le-tir-sportif/" target="_blank">DicoduSport : Quelle arme choisir</a></li>
+<li><a href="https://essai-armes.fr/en/which-gun-for-sport-shooting-beginners-guide/" target="_blank">EssaiArmes : Guide débutant</a></li>
+</ul></div>
+
+</article></body></html>
